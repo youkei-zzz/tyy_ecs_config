@@ -1,0 +1,12 @@
+{
+  "name": "ctyun-scraper",
+  "version": "1.0.0",
+  "description": "Playwright crawler for CTYun pricing page.",
+  "main": "完整爬取脚本.js",
+  "scripts": {
+    "start": "node 完整爬取脚本.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.1"
+  }
+}

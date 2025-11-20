@@ -1,0 +1,89 @@
+步骤一：地域选择（已完成）
+	1、情况一，无成都3的区域要求：首先进入"https://www.ctyun.cn/pricing/ecs"的界面，这个界面是天翼云弹性云主机价格计算器界面。在等待一会儿后进入到本界面中，首先你需要获取页面的结构并理解。然后找到“1.省份下拉框”，进行模拟用户点击。点击后，会弹出目前的所有云主机可以开通的“2.省份展示框”。“2.省份展示框”中有很多“3.省份分组模块”，提示一下你，其实总共有4个按首字母分组的模块，每个模块的class类名为areaItem。进一步展开“3.省份分组模块”结构，发现在里面有class类名为areaGroup的div块，这个div下面的“4.省份首字母范围展示模块”中的内容是展示他的祖父模块即“3.省份分组模块”的首字母范围（如：A-G），同时“5.areaGroup的兄弟节点模块”下存在“6.省份列表的ul元素”（且该ul的class类名为“arealist”），这个ui下面有很多li元素，每一个li元素对应的”7.省份名称块“就是这个分组下的省份了。其他的省份分组查看方式也是一样的逻辑，只是排列的顺序有不同。
+	接着如果要查看某个分组下的某个省份下有哪些可以用的资源池，你可以继续操作，对某个想要查看的省份的li进行点击操作（当你点击某个省份对应的li后，可以让该li元素的class类名变成active）。点击完成后，接着找到页面上的“8.资源池展示区域”，“8.资源池展示区域”中有一个class类名为el-radio-group的div元素，继续找到它，在本元素内部存在n个label标签，有多少个label标签就代表该省份下有多少个可以使用的资源池。在label标签之下，存在一个span元素，即为“9.资源池展示模块”。这就是该省份下的一个资源池的名称！
+	当你选择好了资源池后，可能会出现“10.可用区”的选择（注：这是指在同一资源池下，电力、网络隔离的物理区域，可用分区之间内网互通，不同可用分区之间物理隔离）。在本元素内部存在n个label标签，有多少个label标签就代表该资源池下有多少个可以使用的可用区。在label标签之下，存在一个span元素，这个span元素就是对应的可用区名称。若无特殊要求，则默认选择“11.第一个label对应的可用区”即随机分配可用区。模拟用户对于具体可用区域的选择，比如你随机先选择一个省份分组下的某个具体的省份，然后在“8.资源池展示区域”会出现很多的可以使用的区域，你现再在其中随机点击选择一个可用区域，你可以使用random来随机选择，前提是你要计算运行有多少个label，不要让选择的顺序超出了可以使用的区域个数。
+	2、情况二，有成都3的区域要求：首先进入指定页面"https://console2.ctyun.cn/ecm/?region=cn-sccd1&locale=zh-CN#/ecs/createVm"，这里如果强制被跳转到了登陆页面"https://www.ctyun.cn/h5/auth/login"，则找到“12.登陆界面账号登录”对应的按钮，模拟用户点击操作。接着会出现一个账号、密码输入框，然后在“13.登陆界面账号输入框”中输入账号：tyy，在“14.登陆界面密码输入框”中输入：YADX@2025。然后勾选下方的“15.登陆界面隐私同意勾选框”，再往下点击“16.登陆界面登录按钮”即可完成登录操作。登录完成过后，首先点击"17.成都3区域CPU内核数选项弹出按钮"，然后会弹出"18.成都3区域CPU核数下拉框"，在本元素内部存在n个li标签，有多少个li标签就代表成都3区域下有多少个可以选择的CPU核数选项。在li标签之下，存在一个span元素，这个span元素就是对应的核数选项名称。这里若没有要求CPU核数的选择，则使用16vCPUs（仅仅在成都3下的选项才是这样的写法）。然后下一步找到，”19.成都3区域内存规格选择弹出按钮“，模拟用户鼠标点击后出现”20.成都3区域内存规格下拉框“，在下拉框中分别为多个li元素，每个li代表一个”21.成都3区域内存规格选项“，通过读取每一个li元素对应的信息操作你首先获取整个内存规格，再按照用户输入的要求使用正则表达式精准来对内存规格进行选择，如果没有输入的要求，则按照32G内存选择（注意：内存的规格一般是CPU内核数乘以2或4）。选择好以后会出现”22.成都3区域具体可选云主机表格“，该表格内是将所有的符合本配置的所有类型云主机都以表格的形式列举出来了！表头为：实例类型、规格名称、vCPUs、内存等，然后一般选择该表格中的第一行tr或者是第二行tr，若没有对规格名称有严格要求的选择，则模拟用户点击选择第一行或第二行的tr即可。接着选择操作系统配置，点击”23.成都3区域指定配置云主机操作系统下拉框弹出按钮“，接着会弹出可以选择的滚动列表”24.成都3区域云主机指定配置操作系统选择下拉框“，若无特定的要求则点击选择”25.成都3区域云主机指定配置CentOS操作系统选项“，完成操作系统选择后就是操作系统版本，点击”26.成都3区域云主机具体操作系统版本选择下拉框弹出按钮“，接着会弹出可供选择的”27.成都3区域云主机具体操作系统版本选择下拉列表“，请找到该下拉列表中指定输入的li元素，并搜索该li元素内部是否有section元素的title=" EOL "的元素，若有则跳过该li元素，然后遍历完uI内部的所有li元素直到找到li元素内部没有title=" EOL "的section元素。若存在多个则应该对操作系统的版本号码进行匹配，例如Ubuntu20.04，匹配这里面的20.04这串版本数字，若内部元素没有不含title=" EOL "的li元素，则应该对内部元素含有title=" EOL "的li元素进行匹配，找到系统版本条件的li模拟点击！
+	完成成都3操作系统具体版本选择后，接下来进入系统盘配置环节。首先找到”28.成都3区域系统盘类型选择下拉框弹出按钮“模拟用户点击，会出现”29.成都3区域系统盘类型选择下拉框列表“找到这个uI列表下面的”30.成都3区域系统盘类型具体名称展示“，若无明确要求则选择/html/body/ti-drop[5]/ti-list/ul/li[3]对应的通用型SSD系统盘类型。然后是对系统盘大小的选择，找到”31.成都3区域系统盘大小输入框“，若无明确要求则输入默认40G的系统盘大小，否则在输入框中输入指定的系统盘大小！如果还要求增加数据盘1，则首先点击“32.成都3区域新增数据盘1按钮”然后选择数据盘1的类型，点击“33.成都3区域数据盘类型选择按钮”，接着选择类型的逻辑如同上述。类型选择完成后选择对应的磁盘大小，找到“34.成都3区域数据盘大小输入框”，若无明确要求则输入默认40G的数据盘大小，否则在输入框中输入指定的数据盘大小！若需要n个相同的这样的盘，则，找到“35.成都3区域数据盘数量输入框”在输入框中输入指定的数量，否则就不用输入数量！
+	完成对成都3区域的云主机的以上配置选择后，现在进入最后的环节，选择开通时长。首先找到“36.成都3区域云主机开通时长下拉框弹出按钮”，模拟用户点击，然后会弹出”37.成都3区域云主机开通时长下拉框列表“，在下拉框中分别为多个li元素，每个li代表一个”38.成都3区域云主机开通时长选项“，通过读取每一个li元素对应的信息操作你首先获取整个开通时长的选项，再按照用户输入的要求使用表达式精准来对开通时长进行选择，如果没有输入的要求则默认选择1个月开通时长。最后读取“39.成都3区域云主机最终价格栏”的元素信息，要求只保留数字！
+	现在，步骤一的操作你可以循环不断按照我的指引逻辑进行点击操作，要确保点击准确。参照的Xpath结构在后边附！
+
+
+步骤二：配置信息选择（已完成）
+	首先找到“40.CPU架构模块”，这里有两个label，表示有两种架构，label里面的选项为x86和ARM，此处默认点击选择第一个label，即x86。接下来选择配置规格，这里首先找到”“41.CPU规格选择弹出按钮”，模拟用户鼠标点击后会出现”42.CPU核数下拉框“，在下拉框中分别为多个li元素，每个li代表一个”43.CPU内核数选项“，通过这个操作你获取整个CPU内核数，再按照用户输入的JSON格式要求来对CPU内核数选项进行选择，如果没有输入的要求，则按照16核选择。
+	然后下一步找到，”44.内存规格选择弹出按钮“，模拟用户鼠标点击后出现”45.内存规格下拉框“，在下拉框中分别为多个li元素，每个li代表一个”46.内存规格选项“，通过这个操作你获取整个内存规格，再按照用户输入的要求来对内存规格进行选择，如果没有输入的要求，则按照32G内存选择。（注意：内存的规格一般是CPU内核数乘以2或4）
+	此外，因为每个地区的可选的CPU内核数和内存可选项是随着云主机的资源变化而变化的，不是固定的。所以，你需要额外编写一段JS文件，是用于自动化定期爬取CPU内核数选项和内存规格选项。你需要这么做，首先按照顺序选择对应的某个省份（例如安徽省），然后会出现一个或者是多个资源池（例如：芜湖2、合肥2、芜湖4），然后你依次选择资源池，例如选择芜湖2，然后进行正常的云主机CPU内核数选项的爬取查看保存，在本目录下保存的路径和格式是：/安徽/安徽-芜湖2/CPU-可选项.txt，并将对应的Xpath空一格写在后面；同时对内存可选项进行爬取并查看保存，在本目录下保存的路径和格式是：/安徽/安徽-芜湖2/内存-可选项.txt，并将对应的Xpath空一格写在后面。然后操作完成后，对合肥2进行相同的操作，保存的路径和格式为本目录下的 /安徽/安徽-合肥2/，文件命名也是一样的规则。最后是芜湖4的操作，直到把这个省下的所有可用区域都这样操作完成，则换一个省份。从第1个省份直到第32个省份执行完毕，执行过程需要有误日志记录，当执行过程中的错误发生时，应该记录进入日志，便于查看。注意，第一次加载进入页面的时候等待时间稍微长一些，避免出现一些加载的问题。（本段内容生成的代码放置在本目录的参数爬取文件夹下！）
+	然后选择好了CPU核数和内存规格配置以后，接着对符合CPU核数和内存大小的云主机的类型进行选择，首先找到“47.云主机类型栏”，该div元素内部有很多个label标签，每个label标签就是对应的符合CPU核数和内存大小的云主机的类型，可能有n个。若无要求则点击选择”48.默认类型云主机“，即通用型云主机，否则按照要求类型来选择。当你完成了对云主机类型的选择过后，会出现对应类型实例的云主机的选择。首先找到”49.对应云主机类型实例栏“，该div元素内部有很多个label标签，每个label标签就是对应的符合云主机类型的实例的展示，可能有n种实例。若无要求则点击选择”50.全部类型实例“，否则按照要求类型来选择。
+	接下来是对已经选择好型号的云主机的储存大小进行选择配置。首先是找到“51.系统盘的类型选择弹出按钮”，模拟用户点击后会弹出”52.系统盘储存类型下拉框“，然后根据输入要求进行选择，若无要求则选择“53.默认系统盘类型”选项，即通用型SSD。接着对该类型的系统盘大小进行设置，找到“54.系统盘大小输入框”，根据输入要求输入对应的系统盘大小，若无要求，则默认设置40G的系统盘大小。本步是对系统盘的类型和大小选择，若用户还要开通数据盘，则进行数据盘选择配置。若需要增加数据盘1，请首先点击“55.新建数据盘1”。然后接着根据输入要求进行数据盘1类型选择，点击“56.数据盘1的类型选择弹出按钮”，模拟用户点击后会弹出”57.数据盘1储存类型下拉框“，若无要求则选择“59.数据盘1默认类型选项”，然后若要改变数据盘1的大小，点击“60.数据盘1储存大小输入框”，根据输入要求输入对应的数据盘1大小，若无要求，则默认设置100G的数据盘大小。若还需要增加数据盘2，请首先点击”61.新建数据盘2“，然后接着根据输入要求进行数据盘类型选择，点击“62.数据盘2的类型选择弹出按钮”，模拟用户点击后会弹出”63.数据盘2储存类型下拉框“，若无要求则选择“64.数据盘2默认类型选项”，即通用型SSD，然后若要改变数据盘2的大小，点击“65.数据盘2储存大小输入框”，根据输入要求输入对应的数据盘2大小，若无要求，则默认设置100G的数据盘大小。
+	
+	现在，模拟用户对于具体CPU内核数的选择以及具体内存规格的选择，你随机先选择一个CPU内核数选项，然后再随机选择一个内存规格选项，你可以使用random来随机选择，前提是你要首先读取本目录下的云主机CPU核数.txt文件和云主机内存大小.txt文件，知道有哪几项可以选择，不要选择到不存在的规格。保持浏览器执行完成后不要自动关闭！
+	现在，步骤二的操作你可以按照我的指引逻辑进行点击操作，要确保点击准确。参照的Xpath结构在后边附！
+
+步骤三：购买弹性公网IP选择（未完成）
+	对上述的云主机的所有配置项选择完毕以后，在本页面还有一个进行购买弹性IP的选择，这里选择“暂不购买按钮”，因为后续我会将弹性公网IP作为一个单独的产品项进行自动化的购买价格查询的代码编写
+
+
+附： 
+	1、“省份下拉框”对应的Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[2]/form/div[1]/div/div/div/div/input。
+	2、“省份展示框”对应Xpath结构为：/html/body/div[2]/div[2]。
+	3、“省份分组模块”对应Xpath结构为：/html/body/div[2]/div[2]/div[X]，X表示中国的所有省份的分组，这里所有省份分成了4组，所以X为1到4。	
+	4、“省份首字母范围展示模块”对应Xpath结构为：/html/body/div[2]/div[2]/div[1]/div[1]/span。
+	5、“areaGroup的兄弟节点模块”对应Xpath结构为：/html/body/div[2]/div[2]/div[1]/div[2]。
+	6、“省份列表的ul元素”对应Xpath结构为：/html/body/div[2]/div[2]/div[1]/div[2]/ul。
+	7、”省份名称块“对应Xpath结构为：/html/body/div[2]/div[2]/div[1]/div[2]/ul/li[X]，X表示该分组下的所有省份顺序，因为每个分组的省份个数不定，所以X为1到多个。但肯定从1开始。
+	8、“资源池展示区域”对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[2]/form/div[2]/div。
+	9、“资源池展示模块”对应Xpath为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[2]/form/div[2]/div/div/label[1]/span。
+	10、“可用区”对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[3]/form/div/div[2]/div
+	11、"第一个label对应的可用区"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[3]/form/div/div[2]/div/label[X]，这里的X表示第X个选项，X=1时是默认的随机分配选项，X=2时是可用区1，以此类推。
+	12、"登陆界面账号登录"对应Xpath结构为：/html/body/div/div/div[2]/div/div/div/div[2]/div/div[1]/div/div/div[2]。
+	13、"登陆界面账号输入框"对应Xpath结构为：//*[@id="el-id-9225-11"]。
+	14、"登陆界面密码输入框"对应Xpath结构为：//*[@id="el-id-9225-12"]。
+	15、"登陆界面隐私同意勾选框"对应Xpath结构为：//*[@id="app"]/div/div[2]/div/div/div/div[2]/div/div[2]/form/div[3]/div/label/span[1]。
+	16、"登陆界面登录按钮"对应Xpath结构为：//*[@id="app"]/div/div[2]/div/div/div/div[2]/div/div[2]/form/div[4]/button。
+	17、"成都3区域CPU内核数选项弹出按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[2]/ti-formfield/table/tbody/tr[3]/td[3]/ti-item/div/ecs-flavor-modal/div/span[1]/ti-select/ti-dominator/section[1]/section。
+	18、"成都3区域CPU核数下拉框"对应Xpath结构为：/html/body/ti-drop[5]/ti-list/ul，该uI下对应了很多的li，li[X]这里的X表示第X个选项，代表不同的内存规格数，具体务必以实际内容为准。
+	19、"成都3区域内存规格选择弹出按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[2]/ti-formfield/table/tbody/tr[3]/td[3]/ti-item/div/ecs-flavor-modal/div/span[2]/ti-select/ti-dominator/section[1]/section。
+	20、"成都3区域内存规格下拉框"对应Xpath结构为：/html/body/ti-drop[6]/ti-list/ul。
+	21、"成都3区域内存规格选项"对应Xpath结构为：/html/body/ti-drop[6]/ti-list/ul/li[X]，这里的X表示第X个选项，代表不同的内存规格数，具体务必以实际内容为准。
+	22、"成都3区域具体可选云主机表格"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[2]/ti-formfield/table/tbody/tr[3]/td[3]/ti-item/div/ecs-flavor-modal/div/div/ti-table/div[2]/table/tbody。
+	23、"成都3区域指定配置云主机操作系统下拉框弹出按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[3]/ti-formfield/table/tbody/tr/td[3]/ti-item/div[2]/ti-select[1]/ti-dominator/section[1]/section。
+	24、"成都3区域云主机指定配置操作系统选择下拉框"对应Xpath结构为：/html/body/ti-drop[3]/ti-list/ul。
+	25、"成都3区域云主机指定配置CentOS操作系统选项"对应Xpath结构为：/html/body/ti-drop[3]/ti-list/ul/li[2]，这里的li元素有X个，当X=1即li[1]则为AnolisOS，X=2即li[2]则为CentOS，以此类推，具体请以实际列表中的操作系统名称为准。
+	26、"成都3区域云主机具体操作系统版本选择下拉框弹出按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[3]/ti-formfield/table/tbody/tr/td[3]/ti-item/div[2]/ti-select[2]/ti-dominator/section[1]/section。
+	27、"成都3区域云主机具体操作系统版本选择下拉列表"对应Xpath结构为：/html/body/ti-drop[4]/ti-list/ul。uI元素里面有很多li元素，每个li对应的Xpath为：/html/body/ti-drop[4]/ti-list/ul/li[X]，在li内部存在版本信息的span元素，对应的Xpath结构是：/html/body/ti-drop[4]/ti-list/ul/li[X]/section/span/span[1]，li[X]表示某个操作系统的不同的版本选项。
+	28、"成都3区域系统盘类型选择下拉框弹出按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[4]/ti-formfield/table/tbody/tr[1]/td[3]/ti-item/div[1]/ti-select/ti-dominator/section[1]/section。
+	29、"成都3区域系统盘类型选择下拉框列表"对应Xpath结构为：/html/body/ti-drop[5]/ti-list/ul。
+	30、"成都3区域系统盘类型具体名称展示"对应Xpath结构为：/html/body/ti-drop[5]/ti-list/ul/li[X]/section/span。uI元素里面有很多li元素，每个li对应的Xpath为：/html/body/ti-drop[4]/ti-list/ul/li[X]，在li内部存在系统盘类型展示信息的span元素，li[X]表示某个类型的系统盘的选项。
+	31、"成都3区域系统盘大小输入框"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[4]/ti-formfield/table/tbody/tr[X]/td[3]/ti-item/div[1]/ti-spinner/div[2]/input。这里的tr[X]是第X行的意思，若我需要对系统盘的大小进行自定义则X=1，若我需要对数据盘1的大小进行自定义则X=2，若我需要对数据盘3的大小进行自定义则X=3，以此类推！
+	32、"成都3区域新增数据盘1按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[4]/ti-formfield/table/tbody/tr[2]/td[3]/ti-item/div[1]/tp-iconaction/a/span。
+	33、"成都3区域数据盘类型选择按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[4]/ti-formfield/table/tbody/tr[2]/td[3]/ti-item/div[1]/ti-select/ti-dominator/section[1]/section，这里的tr[X]是第X行的意思，若我需要对数据盘1的类型选择则X=1，若我需要对数据盘2的类型选择则X=2，以此类推！
+	34、"成都3区域数据盘大小输入框"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[4]/ti-formfield/table/tbody/tr[2]/td[3]/ti-item/div[1]/ti-spinner/div[2]/input。
+	35、"成都3区域数据盘数量输入框"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[1]/ti-app-layout-main-content/div/tp-layout-content/tp-layout-content-body/div/ecs-create-step1/tp-layout-section[4]/ti-formfield/table/tbody/tr[2]/td[3]/ti-item/div[1]/div/div[1]/ti-spinner/div[2]/input。
+	36、"成都3区域云主机开通时长下拉框弹出按钮"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[2]/ti-app-layout-main-footer/ecs-create-buylayer/tp-buylayer/div/tp-buylayer-left/div/div[1]/div[1]/div/ti-select/ti-dominator/section[1]。
+	37、"成都3区域云主机开通时长下拉框列表"对应Xpath结构为：/html/body/ti-drop[7]/ti-list/ul。
+	38、"成都3区域云主机开通时长选项"对应Xpath结构为：/html/body/ti-drop[7]/ti-list/ul/li[X]，这里的li元素有X个，当X=1即li[1]则为默认开通时长，即1个月，X=2即li[2]则为2个月，以此类推，具体请以实际列表中的操作系统名称为准。
+	39、"成都3区域云主机最终价格栏"对应Xpath结构为：/html/body/div[4]/ibiza-ecs/ti-app-layout/div[2]/div[2]/div[1]/ibiza-ecs-ecs/ng-component/ti-app-layout-main/div[3]/div[2]/div[2]/ti-app-layout-main-footer/ecs-create-buylayer/tp-buylayer/div/tp-buylayer-left/div/div[1]/div[2]/div[1]/div[1]/span/span[2]/span/span/span。
+	40、"CPU架构模块"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[6]/form/div/div[2]/div。
+	41、"CPU规格选择弹出按钮"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[7]/form/div/div[2]/div[1]/div[1]。注意这里的div[7]也许是div[8]！请务必做好备用定位方案。
+	42、"CPU核数下拉框"对应Xpath结构为：/html/body/div[2]/div[3]/div/div/div[1]/ul。
+	43、"CPU内核数选项"对应Xpath结构为：/html/body/div[2]/div[3]/div/div/div[1]/ul/li[X]，这里的X表示第X个选项，X=1时是默认的全部CPU选项，X=2时是1核，以此类推。
+	44、"内存规格选择弹出按钮"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[7]/form/div/div[2]/div[2]/div。注意这里的div[7]也许是div[8]！请务必做好备用定位方案。
+	45、"内存规格下拉框"对应Xpath结构为：/html/body/div[2]/div[4]/div/div/div[1]/ul。
+	46、"内存规格选项"对应Xpath结构为：/html/body/div[2]/div[4]/div/div/div[1]/ul/li[X]，这里的X表示第X个选项，X=1时是默认的全部内存选项，X=2时内存规格是1G，以此类推。
+	47、"云主机类型栏"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[9]/form/div/div[2]/div。
+	48、"默认类型云主机"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[9]/form/div/div[2]/div/label[X]，这里的X表示符合CPU核数和内存大小的第X个类型的云主机选项，X=1时是默认的通用型选项，X=2时可能是计算型，X=3时可能是内存型，以此类推，但务必以实际内容为准。
+	49、"对应云主机类型实例栏"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[10]/form/div/div[2]/div。
+	50、"全部类型实例"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[10]/form/div/div[2]/div/label[X]，这里的X表示符合云主机类型的实例选项，X=1时是默认的全部类型实例，X=2时可能是通用型s7，X=3时可能是通用型s8，以此类推，但务必以实际内容为准。
+	51、"系统盘的类型选择弹出按钮"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[1]/div[1]/div。
+	52、"系统盘储存类型下拉框"对应Xpath结构为：/html/body/div[2]/div[7]/div/div/div[1]/ul。
+	53、"默认系统盘类型"对应Xpath结构为：/html/body/div[2]/div[7]/div/div/div[1]/ul/li[X]，这里的X表示磁盘的类型选项，X=1时是默认的选项即通用型SSD，X=2时是超高IO类型，以此类推，但务必以实际内容为准。
+	54、"系统盘大小输入框"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[1]/div[2]/div/div/input。
+	55、"新建数据盘1"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[3]/button。（在新建数据盘2后，该Xpath对应的按钮会变为数据盘1的删除按钮！）
+	56、"数据盘1的类型选择弹出按钮"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[2]/div[1]/div。
+	57、"数据盘1储存类型下拉框"对应Xpath结构为：/html/body/div[2]/div[7]/div/div/div[1]/ul。/html/body/div[2]/div[9]/div/div/div[1]/ul。
+	59、"数据盘1默认类型选项"对应Xpath结构为：/html/body/div[2]/div[9]/div/div/div[1]/ul/li[X]，这里的X表示磁盘的类型选项，X=1时是默认的选项通用型SSD，X=2时是超高IO，以此类推，但务必以实际内容为准。
+	60、"数据盘1储存大小输入框"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[2]/div[2]/div/div/input。
+	61、"新建数据盘2"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[4]/button。
+	62、"数据盘2的类型选择弹出按钮"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[3]/div[1]/div。
+	63、"数据盘2储存类型下拉框"对应Xpath结构为：/html/body/div[2]/div[10]/div/div/div[1]/ul。
+	64、"数据盘2默认类型选项"对应Xpath结构为：/html/body/div[2]/div[10]/div/div/div[1]/ul/li[X]，这里的X表示磁盘的类型选项，X=1时是默认的选项通用型SSD，X=2时是超高IO，以此类推，但务必以实际内容为准。
+	65、"数据盘2储存大小输入框"对应Xpath结构为：/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[19]/form/div/div[2]/div/div[3]/div[2]/div/div/input。
