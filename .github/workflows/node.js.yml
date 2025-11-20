@@ -1,31 +1,111 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: Deploy crawler
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  schedule:
+    # Trigger every 12 hours. A guard step below makes sure the crawler itself only
+    # runs if at least 36 hours passed since the previous completed execution.
+    - cron: '0 */12 * * *'
+
+env:
+  RUN_INTERVAL_MINUTES: "2160" # 36 hours
+  CRAWLER_SCRIPT: "完整爬取脚本.js"
 
 jobs:
-  build:
-
+  crawl:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+      - name: Decide whether to run crawler
+        id: interval
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const requiredMinutes = Number(process.env.RUN_INTERVAL_MINUTES ?? 2160);
+            if (context.eventName !== 'schedule') {
+              core.setOutput('ready', 'true');
+              core.info(`Event "${context.eventName}" triggered the workflow -> running immediately.`);
+              return;
+            }
+
+            const minSpacingMs = requiredMinutes * 60 * 1000;
+            const { data } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: context.workflow,
+              status: 'completed',
+              per_page: 5,
+            });
+
+            const previous = data.workflow_runs.find((run) => run.id !== context.runId && run.conclusion);
+            if (!previous) {
+              core.setOutput('ready', 'true');
+              core.info('No prior completed crawler run found, running now.');
+              return;
+            }
+
+            const elapsedMs = Date.now() - Date.parse(previous.updated_at);
+            if (elapsedMs >= minSpacingMs) {
+              core.setOutput('ready', 'true');
+              core.info(`Last completed run was ${(elapsedMs / 3600000).toFixed(1)} hours ago.`);
+            } else {
+              core.setOutput('ready', 'false');
+              const remaining = ((minSpacingMs - elapsedMs) / 3600000).toFixed(1);
+              core.notice(`Only ${(elapsedMs / 3600000).toFixed(1)} hours passed since the last run. Waiting another ${remaining} hours.`);
+            }
+
+      - name: Skip because interval not reached
+        if: steps.interval.outputs.ready != 'true'
+        run: echo "36-hour interval has not passed yet, skipping crawler execution for this run."
+
+      - name: Checkout repository
+        if: steps.interval.outputs.ready == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        if: steps.interval.outputs.ready == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.interval.outputs.ready == 'true'
+        run: npm ci
+
+      - name: Install Playwright browsers
+        if: steps.interval.outputs.ready == 'true'
+        run: npx playwright install --with-deps
+
+      - name: Run crawler
+        id: run_crawler
+        if: steps.interval.outputs.ready == 'true'
+        run: |
+          set -o pipefail
+          node "$CRAWLER_SCRIPT" 2>&1 | tee crawl-output.log
+
+      - name: Upload crawler log
+        if: ${{ steps.interval.outputs.ready == 'true' && always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-output
+          path: crawl-output.log
+          if-no-files-found: ignore
+
+      - name: Email crawl report
+        if: ${{ steps.interval.outputs.ready == 'true' && always() }}
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "CTYun crawler result - ${{ steps.run_crawler.outcome }} (run #${{ github.run_number }})"
+          to: ${{ secrets.NOTIFY_EMAIL }}
+          from: ${{ secrets.SMTP_FROM || secrets.SMTP_USERNAME }}
+          secure: true
+          body: file://crawl-output.log
+          attachments: crawl-output.log
