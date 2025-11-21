@@ -87,6 +87,55 @@ jobs:
           set -o pipefail
           node "$CRAWLER_SCRIPT" 2>&1 | tee crawl-output.log
 
+      - name: Package generated files
+        id: package_outputs
+        if: ${{ always() && steps.interval.outputs.ready == 'true' }}
+        run: |
+          if [ ! -f crawl-output.log ]; then
+            touch crawl-output.log
+          fi
+
+          attachments="crawl-output.log"
+          list_file=$(mktemp)
+          git ls-files -io --exclude-standard > "$list_file" || true
+
+          filtered_file=$(mktemp)
+          if [ -s "$list_file" ]; then
+            while IFS= read -r item; do
+              [ -z "$item" ] && continue
+              case "$item" in
+                node_modules/*|tmp.js)
+                  continue
+                  ;;
+              esac
+              printf '%s\n' "$item" >> "$filtered_file"
+            done < "$list_file"
+          fi
+
+          if [ -s "$filtered_file" ]; then
+            tar -czf crawler-generated.tar.gz --files-from "$filtered_file"
+            attachments="$attachments"$'\n'"crawler-generated.tar.gz"
+            echo "archive_created=true" >> "$GITHUB_OUTPUT"
+            echo "archive_path=crawler-generated.tar.gz" >> "$GITHUB_OUTPUT"
+          else
+            echo "archive_created=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          printf 'attachment_list<<EOF\n%s\nEOF\n' "$attachments" >> "$GITHUB_OUTPUT"
+
+      - name: Resolve sender email
+        id: sender
+        if: ${{ steps.interval.outputs.ready == 'true' }}
+        env:
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+        run: |
+          if [ -n "$SMTP_FROM" ]; then
+            echo "value=$SMTP_FROM" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=$SMTP_USERNAME" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Upload crawler log
         if: ${{ steps.interval.outputs.ready == 'true' && always() }}
         uses: actions/upload-artifact@v4
@@ -105,7 +154,7 @@ jobs:
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "CTYun crawler result - ${{ steps.run_crawler.outcome }} (run #${{ github.run_number }})"
           to: ${{ secrets.NOTIFY_EMAIL }}
-          from: ${{ secrets.SMTP_FROM || secrets.SMTP_USERNAME }}
+          from: ${{ steps.sender.outputs.value }}
           secure: true
           body: file://crawl-output.log
-          attachments: crawl-output.log
+          attachments: ${{ steps.package_outputs.outputs.attachment_list }}
