@@ -87,54 +87,82 @@ jobs:
           set -o pipefail
           node "$CRAWLER_SCRIPT" 2>&1 | tee crawl-output.log
 
-      - name: Package generated files
+      - name: Package province folders
         id: package_outputs
         if: ${{ always() && steps.interval.outputs.ready == 'true' }}
         run: |
-          if [ ! -f crawl-output.log ]; then
-            touch crawl-output.log
-          fi
+          set -euo pipefail
+          archive_path="region-configs.tar.gz"
+          config_list=$(mktemp)
+          find . -type f \( -name 'CPU-可选项.txt' -o -name '内存-可选项.txt' \) -print0 > "$config_list"
 
-          attachments="crawl-output.log"
-          list_file=$(mktemp)
-          git ls-files -io --exclude-standard > "$list_file" || true
-
-          filtered_file=$(mktemp)
-          if [ -s "$list_file" ]; then
-            while IFS= read -r item; do
-              [ -z "$item" ] && continue
-              case "$item" in
-                node_modules/*|tmp.js)
+          region_dirs_tmp=$(mktemp)
+          if [ -s "$config_list" ]; then
+            while IFS= read -r -d '' file; do
+              rel="${file#./}"
+              top="${rel%%/*}"
+              case "$top" in
+                ""|".git"|".github"|"node_modules")
                   continue
                   ;;
               esac
-              printf '%s\n' "$item" >> "$filtered_file"
-            done < "$list_file"
+              printf '%s\0' "$top" >> "$region_dirs_tmp"
+            done < "$config_list"
           fi
 
-          if [ -s "$filtered_file" ]; then
-            tar -czf crawler-generated.tar.gz --files-from "$filtered_file"
-            attachments="$attachments"$'\n'"crawler-generated.tar.gz"
+          if [ -s "$region_dirs_tmp" ]; then
+            unique_dirs=$(mktemp)
+            sort -zu "$region_dirs_tmp" > "$unique_dirs"
+            mapfile -d '' -t region_dirs < "$unique_dirs"
+            tar -czf "$archive_path" "${region_dirs[@]}"
             echo "archive_created=true" >> "$GITHUB_OUTPUT"
-            echo "archive_path=crawler-generated.tar.gz" >> "$GITHUB_OUTPUT"
+            echo "archive_path=$archive_path" >> "$GITHUB_OUTPUT"
+            printf 'attachment_list<<EOF\n%s\nEOF\n' "$archive_path" >> "$GITHUB_OUTPUT"
           else
             echo "archive_created=false" >> "$GITHUB_OUTPUT"
+            printf 'attachment_list<<EOF\n\nEOF\n' >> "$GITHUB_OUTPUT"
           fi
-
-          printf 'attachment_list<<EOF\n%s\nEOF\n' "$attachments" >> "$GITHUB_OUTPUT"
 
       - name: Resolve sender email
         id: sender
         if: ${{ steps.interval.outputs.ready == 'true' }}
         env:
-          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          SMTP_FROM_SECRET: ${{ secrets.SMTP_FROM }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
         run: |
-          if [ -n "$SMTP_FROM" ]; then
-            echo "value=$SMTP_FROM" >> "$GITHUB_OUTPUT"
-          else
-            echo "value=$SMTP_USERNAME" >> "$GITHUB_OUTPUT"
+          resolved="$SMTP_FROM_SECRET"
+          if [ -z "$resolved" ]; then
+            resolved="$SMTP_USERNAME"
           fi
+          if [ -z "$resolved" ]; then
+            echo "No SMTP sender available." >&2
+            exit 1
+          fi
+          echo "value=$resolved" >> "$GITHUB_OUTPUT"
+          echo "EMAIL_FROM=$resolved" >> "$GITHUB_ENV"
+
+      - name: Resolve SMTP secure mode
+        id: smtp_secure
+        if: ${{ steps.interval.outputs.ready == 'true' }}
+        env:
+          SMTP_SECURE_SECRET: ${{ secrets.SMTP_SECURE }}
+        run: |
+          value="${SMTP_SECURE_SECRET,,}"
+          case "$value" in
+            ""|"auto"|"default")
+              resolved="true"
+              ;;
+            "true"|"1"|"ssl"|"tls")
+              resolved="true"
+              ;;
+            "false"|"0"|"starttls"|"plain")
+              resolved="false"
+              ;;
+            *)
+              resolved="true"
+              ;;
+          esac
+          echo "value=$resolved" >> "$GITHUB_OUTPUT"
 
       - name: Upload crawler log
         if: ${{ steps.interval.outputs.ready == 'true' && always() }}
@@ -143,6 +171,14 @@ jobs:
           name: crawl-output
           path: crawl-output.log
           if-no-files-found: ignore
+
+      - name: Upload region config archive
+        if: ${{ steps.interval.outputs.ready == 'true' && always() && steps.package_outputs.outputs.archive_created == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: region-configs
+          path: ${{ steps.package_outputs.outputs.archive_path }}
+          if-no-files-found: error
 
       - name: Email crawl report
         if: ${{ steps.interval.outputs.ready == 'true' && always() }}
@@ -154,7 +190,7 @@ jobs:
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "CTYun crawler result - ${{ steps.run_crawler.outcome }} (run #${{ github.run_number }})"
           to: ${{ secrets.NOTIFY_EMAIL }}
-          from: ${{ steps.sender.outputs.value }}
-          secure: true
+          from: ${{ env.EMAIL_FROM }}
+          secure: ${{ steps.smtp_secure.outputs.value == 'true' }}
           body: file://crawl-output.log
           attachments: ${{ steps.package_outputs.outputs.attachment_list }}
