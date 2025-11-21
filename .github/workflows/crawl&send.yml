@@ -7,7 +7,7 @@ on:
   schedule:
     # Trigger every 12 hours. A guard step below makes sure the crawler itself only
     # runs if at least 36 hours passed since the previous completed execution.
-    - cron: '0 */12 * * *'
+    - cron: '0 */24 * * *'
 
 env:
   RUN_INTERVAL_MINUTES: "2160" # 36 hours
@@ -188,7 +188,7 @@ jobs:
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "CTYun crawler result - ${{ steps.run_crawler.outcome }} (run #${{ github.run_number }})"
+          subject: "自动化-爬取云主机参数信息"
           to: ${{ secrets.NOTIFY_EMAIL }}
           from: ${{ env.EMAIL_FROM }}
           secure: ${{ steps.smtp_secure.outputs.value == 'true' }}
