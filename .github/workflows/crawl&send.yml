@@ -80,85 +80,50 @@ jobs:
           set -euo pipefail
           exit_code="${{ steps.run_crawler.outputs.exit_code }}"
           duration="${{ steps.run_crawler.outputs.duration }}"
+
           if [ "$exit_code" == "0" ]; then
-            status="SUCCESS"
+            status="成功 ✅"
           else
-            status="FAILURE"
+            status="失败 ❌"
           fi
+
           hours=$((duration / 3600))
           minutes=$(((duration % 3600) / 60))
           seconds=$((duration % 60))
+
           if [ $hours -gt 0 ]; then
-            time_str="${hours}h ${minutes}m ${seconds}s"
+            time_str="${hours}小时 ${minutes}分钟 ${seconds}秒"
           elif [ $minutes -gt 0 ]; then
-            time_str="${minutes}m ${seconds}s"
+            time_str="${minutes}分钟 ${seconds}秒"
           else
-            time_str="${seconds}s"
+            time_str="${seconds}秒"
           fi
+
+          repo_url="https://raw.githubusercontent.com/${{ github.repository }}/main"
+
           cat > summary.txt <<EOF
-          ====================================
-          ECS config crawler execution report
-          ====================================
-          Status: ${status}
-          Duration: ${time_str}
-          Time (Asia/Shanghai): $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
-          Dataset files: data/ecs-zones-metadata.json, data/ecs-zones-simple.json
-          ====================================
-          EOF
-          echo "summary_file=summary.txt" >> "$GITHUB_OUTPUT"
+====================================
+天翼云 ECS 参数爬取执行报告
+====================================
 
-      - name: Package region folders
-        id: package_outputs
-        if: always()
-        run: |
-          set -euo pipefail
-          archive_path="region-configs.tar.gz"
-          config_list=$(mktemp)
-          find . -type f \( -name 'CPU-可选项.txt' -o -name '内存-可选项.txt' \) -print0 > "$config_list"
-          region_dirs_tmp=$(mktemp)
-          if [ -s "$config_list" ]; then
-            while IFS= read -r -d '' file; do
-              rel="${file#./}"
-              top="${rel%%/*}"
-              case "$top" in
-                ""|".git"|".github"|"node_modules")
-                  continue
-                  ;;
-              esac
-              printf '%s\0' "$top" >> "$region_dirs_tmp"
-            done < "$config_list"
-          fi
-          if [ -s "$region_dirs_tmp" ]; then
-            unique_dirs=$(mktemp)
-            sort -zu "$region_dirs_tmp" > "$unique_dirs"
-            mapfile -d '' -t region_dirs < "$unique_dirs"
-            tar -czf "$archive_path" "${region_dirs[@]}"
-            echo "archive_created=true" >> "$GITHUB_OUTPUT"
-            echo "archive_path=$archive_path" >> "$GITHUB_OUTPUT"
-            printf 'attachment_list<<EOF\n%s\nEOF\n' "$archive_path" >> "$GITHUB_OUTPUT"
-          else
-            echo "archive_created=false" >> "$GITHUB_OUTPUT"
-            printf 'attachment_list<<EOF\n\nEOF\n' >> "$GITHUB_OUTPUT"
-          fi
+执行状态: ${status}
+执行时长: ${time_str}
+执行时间: $(TZ='Asia/Shanghai' date '+%Y年%m月%d日 %H:%M:%S')
 
-      - name: Upload crawler log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: crawl-output
-          path: crawl-output.log
-          if-no-files-found: ignore
+数据文件访问链接:
+------------------------------------
+📊 完整元数据 (ecs-zones-metadata.json):
+${repo_url}/data/ecs-zones-metadata.json
 
-      - name: Upload region config archive
-        if: always() && steps.package_outputs.outputs.archive_created == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: region-configs
-          path: ${{ steps.package_outputs.outputs.archive_path }}
-          if-no-files-found: error
+📋 简化区域列表 (ecs-zones-simple.json):
+${repo_url}/data/ecs-zones-simple.json
+
+====================================
+此报告由 GitHub Actions 自动生成
+====================================
+EOF
 
       - name: Resolve sender email
-        id: sender
         if: always()
         env:
           SMTP_FROM_SECRET: ${{ secrets.SMTP_FROM }}
@@ -172,7 +137,6 @@ jobs:
             echo "No SMTP sender available." >&2
             exit 1
           fi
-          echo "value=$resolved" >> "$GITHUB_OUTPUT"
           echo "EMAIL_FROM=$resolved" >> "$GITHUB_ENV"
 
       - name: Resolve SMTP secure mode
