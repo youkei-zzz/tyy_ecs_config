@@ -1,0 +1,114 @@
+name: Auto crawl
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run every day at 02:00 UTC (10:00 Beijing time)
+    - cron: '0 2 * * *'
+
+jobs:
+  auto-crawl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Prepare data directory
+        run: mkdir -p data
+
+      - name: Run crawler
+        id: run_crawler
+        run: |
+          set -o pipefail
+          start_time_epoch=$(date +%s)
+          start_time_human=$(date -u +"%Y-%m-%d %H:%M:%S %Z")
+          node "完整爬取脚本.js" 2>&1 | tee crawl-output.log
+          exit_code=${PIPESTATUS[0]}
+          end_time_epoch=$(date +%s)
+          end_time_human=$(date -u +"%Y-%m-%d %H:%M:%S %Z")
+          duration=$((end_time_epoch - start_time_epoch))
+          echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
+          echo "duration=$duration" >> "$GITHUB_OUTPUT"
+          echo "start_time=$start_time_human" >> "$GITHUB_OUTPUT"
+          echo "end_time=$end_time_human" >> "$GITHUB_OUTPUT"
+          exit $exit_code
+
+      - name: Commit and push updated dataset
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ecs-zones-metadata.json data/ecs-zones-simple.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto update ECS dataset [skip ci]"
+          git push
+
+      - name: Show dataset HTTP URLs
+        if: success()
+        run: |
+          echo "Metadata URL:"
+          echo "  https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/data/ecs-zones-metadata.json"
+          echo "Simple list URL:"
+          echo "  https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/data/ecs-zones-simple.json"
+
+      - name: Send notification email
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "[${{ github.workflow }}] Run ${{ job.status }} - ${{ github.run_number }}"
+          from: ${{ secrets.MAIL_FROM }}
+          to: ${{ secrets.MAIL_TO }}
+          content_type: text/html
+          body: |
+            <h3>Cloud ECS crawl status: ${{ job.status }}</h3>
+            <ul>
+              <li>Repository: <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a></li>
+              <li>Workflow: ${{ github.workflow }}</li>
+              <li>Run number: ${{ github.run_number }}</li>
+              <li>Start (UTC): ${{ steps.run_crawler.outputs.start_time }}</li>
+              <li>End (UTC): ${{ steps.run_crawler.outputs.end_time }}</li>
+              <li>Duration: ${{ steps.run_crawler.outputs.duration }} s</li>
+              <li>Result: ${{ job.status }}</li>
+            </ul>
+            <p>Data files:</p>
+            <ul>
+              <li><a href="https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-metadata.json">Metadata</a></li>
+              <li><a href="https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-simple.json">Simple List</a></li>
+            </ul>
+            <p>Run log: <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">Actions Run</a></p>
+
+      - name: Upload crawler log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-output
+          path: crawl-output.log
+          if-no-files-found: ignore
