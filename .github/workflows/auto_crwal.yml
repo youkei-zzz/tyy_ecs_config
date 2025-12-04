@@ -1,13 +1,18 @@
-name: Auto crawl
+name: Deploy crawler
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ "main" ]
   schedule:
     # Run every day at 02:00 UTC (10:00 Beijing time)
     - cron: '0 2 * * *'
 
+env:
+  CRAWLER_SCRIPT: "完整爬取脚本.js"
+
 jobs:
-  auto-crawl:
+  crawl:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,24 +36,17 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Prepare data directory
-        run: mkdir -p data
-
       - name: Run crawler
         id: run_crawler
         run: |
           set -o pipefail
-          start_time_epoch=$(date +%s)
-          start_time_human=$(date -u +"%Y-%m-%d %H:%M:%S %Z")
-          node "完整爬取脚本.js" 2>&1 | tee crawl-output.log
+          start_time=$(date +%s)
+          node "$CRAWLER_SCRIPT" 2>&1 | tee crawl-output.log
           exit_code=${PIPESTATUS[0]}
-          end_time_epoch=$(date +%s)
-          end_time_human=$(date -u +"%Y-%m-%d %H:%M:%S %Z")
-          duration=$((end_time_epoch - start_time_epoch))
+          end_time=$(date +%s)
+          duration=$((end_time - start_time))
           echo "exit_code=$exit_code" >> "$GITHUB_OUTPUT"
           echo "duration=$duration" >> "$GITHUB_OUTPUT"
-          echo "start_time=$start_time_human" >> "$GITHUB_OUTPUT"
-          echo "end_time=$end_time_human" >> "$GITHUB_OUTPUT"
           exit $exit_code
 
       - name: Commit and push updated dataset
@@ -64,46 +62,53 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "Auto update ECS dataset [skip ci]"
+          git commit -m "Update ECS zones dataset [skip ci]"
           git push
 
-      - name: Show dataset HTTP URLs
+      - name: Print dataset HTTP URLs
         if: success()
         run: |
           echo "Metadata URL:"
-          echo "  https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/data/ecs-zones-metadata.json"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-metadata.json"
           echo "Simple list URL:"
-          echo "  https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/data/ecs-zones-simple.json"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-simple.json"
 
-      - name: Send notification email
+      - name: Generate execution summary
+        id: summary
         if: always()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: ${{ secrets.SMTP_SERVER }}
-          server_port: ${{ secrets.SMTP_PORT }}
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "[${{ github.workflow }}] Run ${{ job.status }} - ${{ github.run_number }}"
-          from: ${{ secrets.MAIL_FROM }}
-          to: ${{ secrets.MAIL_TO }}
-          content_type: text/html
-          body: |
-            <h3>Cloud ECS crawl status: ${{ job.status }}</h3>
-            <ul>
-              <li>Repository: <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a></li>
-              <li>Workflow: ${{ github.workflow }}</li>
-              <li>Run number: ${{ github.run_number }}</li>
-              <li>Start (UTC): ${{ steps.run_crawler.outputs.start_time }}</li>
-              <li>End (UTC): ${{ steps.run_crawler.outputs.end_time }}</li>
-              <li>Duration: ${{ steps.run_crawler.outputs.duration }} s</li>
-              <li>Result: ${{ job.status }}</li>
-            </ul>
-            <p>Data files:</p>
-            <ul>
-              <li><a href="https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-metadata.json">Metadata</a></li>
-              <li><a href="https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-simple.json">Simple List</a></li>
-            </ul>
-            <p>Run log: <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">Actions Run</a></p>
+        run: |
+          set -euo pipefail
+          exit_code="${{ steps.run_crawler.outputs.exit_code }}"
+          duration="${{ steps.run_crawler.outputs.duration }}"
+          if [ "$exit_code" == "0" ]; then
+            status="SUCCESS"
+          else
+            status="FAILURE"
+          fi
+          hours=$((duration / 3600))
+          minutes=$(((duration % 3600) / 60))
+          seconds=$((duration % 60))
+          if [ $hours -gt 0 ]; then
+            time_str="${hours}h ${minutes}m ${seconds}s"
+          elif [ $minutes -gt 0 ]; then
+            time_str="${minutes}m ${seconds}s"
+          else
+            time_str="${seconds}s"
+          fi
+          cat > summary.txt <<EOF
+          ====================================
+                    参数爬取执行报告
+          ====================================
+          执行结果: ${status}
+          执行时长: ${time_str}
+          开始时间 (Asia/Shanghai): $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
+
+          数据源链接:
+          - Metadata: https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-metadata.json
+          - Simple: https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-simple.json
+          ====================================
+          EOF
+          echo "summary_file=summary.txt" >> "$GITHUB_OUTPUT"
 
       - name: Upload crawler log
         if: always()
@@ -112,3 +117,58 @@ jobs:
           name: crawl-output
           path: crawl-output.log
           if-no-files-found: ignore
+
+      - name: Resolve sender email
+        id: sender
+        if: always()
+        env:
+          SMTP_FROM_SECRET: ${{ secrets.SMTP_FROM }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+        run: |
+          resolved="$SMTP_FROM_SECRET"
+          if [ -z "$resolved" ]; then
+            resolved="$SMTP_USERNAME"
+          fi
+          if [ -z "$resolved" ]; then
+            echo "No SMTP sender available." >&2
+            exit 1
+          fi
+          echo "value=$resolved" >> "$GITHUB_OUTPUT"
+          echo "EMAIL_FROM=$resolved" >> "$GITHUB_ENV"
+
+      - name: Resolve SMTP secure mode
+        id: smtp_secure
+        if: always()
+        env:
+          SMTP_SECURE_SECRET: ${{ secrets.SMTP_SECURE }}
+        run: |
+          value="${SMTP_SECURE_SECRET,,}"
+          case "$value" in
+            ""|"auto"|"default")
+              resolved="true"
+              ;;
+            "true"|"1"|"ssl"|"tls")
+              resolved="true"
+              ;;
+            "false"|"0"|"starttls"|"plain")
+              resolved="false"
+              ;;
+            *)
+              resolved="true"
+              ;;
+          esac
+          echo "value=$resolved" >> "$GITHUB_OUTPUT"
+
+      - name: Email crawl report
+        if: always()
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "自动化-爬取云主机地区参数信息 - ${{ steps.run_crawler.outputs.exit_code == '0' && '成功' || '失败' }}"
+          to: ${{ secrets.NOTIFY_EMAIL }}
+          from: ${{ env.EMAIL_FROM }}
+          secure: ${{ steps.smtp_secure.outputs.value == 'true' }}
+          body: file://summary.txt
