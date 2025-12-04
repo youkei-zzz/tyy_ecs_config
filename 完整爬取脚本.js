@@ -6,12 +6,16 @@ const TARGET_URL = 'https://www.ctyun.cn/pricing/ecs';
 const SUCCESS_LOG_FILE = '成功日志.json';
 const ERROR_LOG_FILE = '错误日志.txt';
 const CONSOLE_LOG_FILE = '运行日志.txt';
+const SIMPLE_DATA_DIR = path.join(__dirname, 'data');
+const RESULTS_DIR = path.join(SIMPLE_DATA_DIR, '爬取结果');
+const METADATA_FILE = path.join(SIMPLE_DATA_DIR, 'ecs-zones-metadata.json');
+const D1_METADATA_FILE = METADATA_FILE; // backward-compatible alias for log output
+const SIMPLE_DATA_FILE = path.join(SIMPLE_DATA_DIR, 'ecs-zones-simple.json');
 
 const INITIAL_WAIT = 4000;
 const OPERATION_WAIT = 1200;
 const AFTER_SELECT_WAIT = 1800;
 const CLICK_WAIT = 350;
-const CACHE_VALIDITY_DAYS = 2;
 const DEFAULT_ZONE_NAME = '默认可用区';
 const DEFAULT_VIEWPORT = { width: 1920, height: 1080 };
 const DEFAULT_BROWSER_ARGS = [
@@ -38,6 +42,7 @@ const HAR_PATH = (() => {
   const pathModule = require('path');
   return pathModule.isAbsolute(raw) ? raw : pathModule.join(__dirname, raw);
 })();
+const SKIP_DIRECTORIES = new Set(['.github', '.vscode', 'node_modules']);
 const DEFAULT_USER_AGENT =
   process.env.PLAYWRIGHT_DEFAULT_UA ||
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0';
@@ -129,16 +134,10 @@ function shouldScrape(successLog, province, pool, zone) {
   const key = getSuccessKey(province, pool, zone);
   if (!successLog[key]) {
     log(`  → 首次爬取: ${key}`);
-    return true;
+  } else {
+    log(`  → 重新爬取: ${key}`);
   }
-  const last = new Date(successLog[key].timestamp);
-  const diffDays = (Date.now() - last.getTime()) / (1000 * 60 * 60 * 24);
-  if (diffDays > CACHE_VALIDITY_DAYS) {
-    log(`  → 缓存过期(${diffDays.toFixed(1)}天前): ${key}`);
-    return true;
-  }
-  log(`  → 跳过(${diffDays.toFixed(1)}天前成功): ${key}`);
-  return false;
+  return true;
 }
 
 function recordSuccess(successLog, province, pool, zone, cpuCount, memCount) {
@@ -632,13 +631,22 @@ async function scrapeZoneData(page, province, poolName, zoneName, zoneDescriptor
   fs.writeFileSync(path.join(outputDir, 'CPU-可选项.txt'), cpuOptions.join('\n'), 'utf8');
   fs.writeFileSync(path.join(outputDir, '内存-可选项.txt'), memOptions.join('\n'), 'utf8');
   log(`    ✓ ${zoneName} 选项已保存 (CPU:${cpuOptions.length} / 内存:${memOptions.length})`);
+  const metadata = {
+    provinceName: province,
+    poolName,
+    zoneName,
+    cpuOptions,
+    memoryOptions: memOptions,
+    updatedAt: new Date().toISOString()
+  };
+  fs.writeFileSync(path.join(outputDir, 'zone-data.json'), JSON.stringify(metadata, null, 2), 'utf8');
   recordSuccess(successLog, province, poolName, zoneName, cpuOptions.length, memOptions.length);
   return { success: true };
 }
 
 async function scrapeResourcePool(page, province, pool, stats, successLog) {
   await selectResourcePool(page, pool);
-  const poolDir = path.join(__dirname, sanitizeName(province), sanitizeName(`${province}-${pool.name}`));
+  const poolDir = path.join(RESULTS_DIR, sanitizeName(province), sanitizeName(`${province}-${pool.name}`));
   ensureDir(poolDir);
 
   const zones = await getAvailabilityZones(page);
@@ -678,6 +686,111 @@ async function scrapeProvince(page, province, stats, successLog) {
     log(`✗ 处理省份失败 ${province}: ${error.message}`, 'ERROR');
   }
 }
+
+function desanitizeDirectoryName(value = '') {
+  return value.replace(/_/g, ' ').trim() || value;
+}
+
+function cleanOptionLine(line = '') {
+  return line.replace(/\s+(css=|xpath=|index:).+$/i, '').trim();
+}
+
+function readOptionsFromTextFile(filePath) {
+  if (!fs.existsSync(filePath)) return [];
+  return fs
+    .readFileSync(filePath, 'utf8')
+    .split(/\r?\n/)
+    .map(cleanOptionLine)
+    .filter(Boolean);
+}
+
+function collectZoneMetadata() {
+  const entries = [];
+  const baseDir = RESULTS_DIR;
+  if (!fs.existsSync(baseDir)) return entries;
+  const provinces = fs.readdirSync(baseDir, { withFileTypes: true });
+  for (const provinceDir of provinces) {
+    if (!provinceDir.isDirectory()) continue;
+    if (SKIP_DIRECTORIES.has(provinceDir.name) || provinceDir.name.startsWith('.')) continue;
+    const provincePath = path.join(baseDir, provinceDir.name);
+    const pools = fs.readdirSync(provincePath, { withFileTypes: true });
+    for (const poolDir of pools) {
+      if (!poolDir.isDirectory()) continue;
+      const poolPath = path.join(provincePath, poolDir.name);
+      const zones = fs.readdirSync(poolPath, { withFileTypes: true });
+      for (const zoneDir of zones) {
+        if (!zoneDir.isDirectory()) continue;
+        const zonePath = path.join(poolPath, zoneDir.name);
+        const metadataPath = path.join(zonePath, 'zone-data.json');
+        let metadata = null;
+        if (fs.existsSync(metadataPath)) {
+          try {
+            metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+          } catch (error) {
+            log(`  ? 解析 zone-data 失败: ${metadataPath} (${error.message})`, 'WARN');
+          }
+        }
+        const provinceName = metadata?.provinceName || desanitizeDirectoryName(provinceDir.name);
+        const poolName = metadata?.poolName || desanitizeDirectoryName(poolDir.name);
+        const zoneName = metadata?.zoneName || desanitizeDirectoryName(zoneDir.name);
+        const cpuOptions = metadata?.cpuOptions || readOptionsFromTextFile(path.join(zonePath, 'CPU-可选项.txt'));
+        const memoryOptions = metadata?.memoryOptions || readOptionsFromTextFile(path.join(zonePath, '内存-可选项.txt'));
+        let updatedAt = metadata?.updatedAt;
+        if (!updatedAt) {
+          try {
+            updatedAt = fs.statSync(zonePath).mtime.toISOString();
+          } catch (error) {
+            updatedAt = new Date().toISOString();
+          }
+        }
+        entries.push({
+          province: provinceName,
+          pool: poolName,
+          zone: zoneName,
+          cpuOptions,
+          memoryOptions,
+          updatedAt
+        });
+      }
+    }
+  }
+  return entries;
+}
+
+  function generateMetadataJson() {
+      const rows = collectZoneMetadata();
+      if (!rows.length) {
+        log('  ? 未找到任何 zone 数据，跳过元数据生成', 'WARN');
+        return;
+      }
+      fs.writeFileSync(METADATA_FILE, JSON.stringify(rows, null, 2), 'utf8');
+    log(`  ✓ 区域元数据已生成，共 ${rows.length} 条 -> ${D1_METADATA_FILE}`);
+  }
+
+  function generateSimpleRegionDataset() {
+    const rows = collectZoneMetadata();
+    if (!rows.length) {
+      log('  ? 未找到任何 zone 数据，跳过简化区域列表生成', 'WARN');
+      return;
+    }
+
+    const seen = new Set();
+    const simple = [];
+    for (const row of rows) {
+      // 仅保留 省份 / 资源池 维度，按二者去重
+      const key = `${row.province}|${row.pool}`;
+      if (seen.has(key)) continue;
+      simple.push({
+        province: row.province,
+        resource_pool: row.pool
+      });
+      seen.add(key);
+    }
+
+    ensureDir(SIMPLE_DATA_DIR);
+    fs.writeFileSync(SIMPLE_DATA_FILE, JSON.stringify(simple, null, 2), 'utf8');
+    log(`  ✓ 简化区域列表已生成，共 ${simple.length} 条 -> ${path.relative(__dirname, SIMPLE_DATA_FILE)}`);
+  }
 
 async function main() {
   const consoleLogPath = path.join(__dirname, CONSOLE_LOG_FILE);
@@ -720,22 +833,28 @@ async function main() {
     log(`总数: ${stats.total} | 成功: ${stats.success} | 跳过: ${stats.skipped} | 失败: ${stats.failed}`);
     log(`成功率: ${stats.total ? (((stats.success + stats.skipped) / stats.total) * 100).toFixed(1) : 0}%`);
     log(`总耗时: ${duration} 秒`);
-    log('========================================\n');
-    await browser.close();
-    console.log(`成功日志: ${path.join(__dirname, SUCCESS_LOG_FILE)}`);
-    console.log(`错误日志: ${path.join(__dirname, ERROR_LOG_FILE)}`);
-    console.log(`运行日志: ${consoleLogPath}`);
+      log('========================================\n');
+      try {
+        generateMetadataJson();
+        generateSimpleRegionDataset();
+      } catch (error) {
+        log(`  ? 数据文件生成失败: ${error.message}`, 'ERROR');
+      }
+      await browser.close();
+      console.log(`成功日志: ${path.join(__dirname, SUCCESS_LOG_FILE)}`);
+      console.log(`错误日志: ${path.join(__dirname, ERROR_LOG_FILE)}`);
+      console.log(`运行日志: ${consoleLogPath}`);
+    }
   }
-}
 
-if (require.main === module) {
-  main().catch((error) => {
-    console.error('程序异常:', error);
-    process.exit(1);
-  });
-}
-
-module.exports = { main };
+  if (require.main === module) {
+    main().catch((error) => {
+      console.error('程序异常:', error);
+      process.exit(1);
+    });
+  }
+  
+ module.exports = { main, generateMetadataJson, generateSimpleRegionDataset };
 
 
 
