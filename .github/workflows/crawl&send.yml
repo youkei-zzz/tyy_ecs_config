@@ -102,31 +102,8 @@ jobs:
           repo_url="https://raw.githubusercontent.com/${{ github.repository }}/main"
 
           cat > summary.txt << 'REPORT_END'
-====================================
-天翼云 ECS 参数爬取执行报告
-====================================
-REPORT_END
 
-          cat >> summary.txt << REPORT_END
-
-执行状态: ${status}
-执行时长: ${time_str}
-执行时间: $(TZ='Asia/Shanghai' date '+%Y年%m月%d日 %H:%M:%S')
-
-数据文件访问链接:
-------------------------------------
-📊 完整元数据 (ecs-zones-metadata.json):
-${repo_url}/data/ecs-zones-metadata.json
-
-📋 简化区域列表 (ecs-zones-simple.json):
-${repo_url}/data/ecs-zones-simple.json
-
-====================================
-此报告由 GitHub Actions 自动生成
-====================================
-REPORT_END
-
-      - name: Resolve sender email
+          - name: Resolve sender email
         if: always()
         env:
           SMTP_FROM_SECRET: ${{ secrets.SMTP_FROM }}
