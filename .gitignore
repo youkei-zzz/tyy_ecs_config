@@ -35,7 +35,9 @@
 /重庆
 /陕西
 /青海
-/data
+/data/*
+!data/ecs-zones-metadata.json
+!data/ecs-zones-simple.json
 *.xlsx
 *.xlsm
 /.claude

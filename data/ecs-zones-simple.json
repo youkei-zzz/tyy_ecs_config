@@ -1,0 +1,246 @@
+[
+  {
+    "province": "上海",
+    "resource_pool": "上海36"
+  },
+  {
+    "province": "上海",
+    "resource_pool": "上海7"
+  },
+  {
+    "province": "云南",
+    "resource_pool": "昆明2"
+  },
+  {
+    "province": "内蒙",
+    "resource_pool": "内蒙6"
+  },
+  {
+    "province": "内蒙",
+    "resource_pool": "呼和浩特3"
+  },
+  {
+    "province": "北京",
+    "resource_pool": "北京5"
+  },
+  {
+    "province": "华东",
+    "resource_pool": "华东1"
+  },
+  {
+    "province": "华北",
+    "resource_pool": "华北2"
+  },
+  {
+    "province": "华南",
+    "resource_pool": "华南2"
+  },
+  {
+    "province": "四川",
+    "resource_pool": "成都4"
+  },
+  {
+    "province": "宁夏",
+    "resource_pool": "中卫5"
+  },
+  {
+    "province": "安徽",
+    "resource_pool": "合肥2"
+  },
+  {
+    "province": "安徽",
+    "resource_pool": "芜湖2"
+  },
+  {
+    "province": "安徽",
+    "resource_pool": "芜湖4"
+  },
+  {
+    "province": "山东",
+    "resource_pool": "山东青岛IT上云8"
+  },
+  {
+    "province": "山东",
+    "resource_pool": "青岛20"
+  },
+  {
+    "province": "山西",
+    "resource_pool": "太原4"
+  },
+  {
+    "province": "山西",
+    "resource_pool": "晋中"
+  },
+  {
+    "province": "广东",
+    "resource_pool": "佛山3"
+  },
+  {
+    "province": "广东",
+    "resource_pool": "佛山7"
+  },
+  {
+    "province": "广东",
+    "resource_pool": "广州6"
+  },
+  {
+    "province": "广西",
+    "resource_pool": "南宁2"
+  },
+  {
+    "province": "广西",
+    "resource_pool": "南宁23"
+  },
+  {
+    "province": "新疆",
+    "resource_pool": "乌鲁木齐27"
+  },
+  {
+    "province": "新疆",
+    "resource_pool": "乌鲁木齐7"
+  },
+  {
+    "province": "新疆",
+    "resource_pool": "新疆昌吉IT上云3"
+  },
+  {
+    "province": "江苏",
+    "resource_pool": "南京2"
+  },
+  {
+    "province": "江苏",
+    "resource_pool": "南京3"
+  },
+  {
+    "province": "江苏",
+    "resource_pool": "南京4"
+  },
+  {
+    "province": "江苏",
+    "resource_pool": "南京5"
+  },
+  {
+    "province": "江西",
+    "resource_pool": "九江"
+  },
+  {
+    "province": "江西",
+    "resource_pool": "南昌5"
+  },
+  {
+    "province": "河北",
+    "resource_pool": "石家庄20"
+  },
+  {
+    "province": "河南",
+    "resource_pool": "郑州5"
+  },
+  {
+    "province": "浙江",
+    "resource_pool": "杭州2"
+  },
+  {
+    "province": "浙江",
+    "resource_pool": "杭州7"
+  },
+  {
+    "province": "海南",
+    "resource_pool": "海口2"
+  },
+  {
+    "province": "湖北",
+    "resource_pool": "武汉3"
+  },
+  {
+    "province": "湖北",
+    "resource_pool": "武汉4"
+  },
+  {
+    "province": "湖北",
+    "resource_pool": "武汉41"
+  },
+  {
+    "province": "湖南",
+    "resource_pool": "郴州2"
+  },
+  {
+    "province": "湖南",
+    "resource_pool": "长沙3"
+  },
+  {
+    "province": "湖南",
+    "resource_pool": "长沙42"
+  },
+  {
+    "province": "甘肃",
+    "resource_pool": "兰州2"
+  },
+  {
+    "province": "甘肃",
+    "resource_pool": "庆阳2"
+  },
+  {
+    "province": "福建",
+    "resource_pool": "厦门3"
+  },
+  {
+    "province": "福建",
+    "resource_pool": "福州25"
+  },
+  {
+    "province": "福建",
+    "resource_pool": "福州3"
+  },
+  {
+    "province": "福建",
+    "resource_pool": "福州4"
+  },
+  {
+    "province": "西南",
+    "resource_pool": "西南1"
+  },
+  {
+    "province": "西南",
+    "resource_pool": "西南2-贵州"
+  },
+  {
+    "province": "西藏",
+    "resource_pool": "拉萨3"
+  },
+  {
+    "province": "贵州",
+    "resource_pool": "贵州3"
+  },
+  {
+    "province": "辽宁",
+    "resource_pool": "沈阳8"
+  },
+  {
+    "province": "辽宁",
+    "resource_pool": "辽阳1"
+  },
+  {
+    "province": "重庆",
+    "resource_pool": "重庆2"
+  },
+  {
+    "province": "陕西",
+    "resource_pool": "西安3"
+  },
+  {
+    "province": "陕西",
+    "resource_pool": "西安4"
+  },
+  {
+    "province": "陕西",
+    "resource_pool": "西安5"
+  },
+  {
+    "province": "陕西",
+    "resource_pool": "西安7"
+  },
+  {
+    "province": "青海",
+    "resource_pool": "西宁2"
+  }
+]
