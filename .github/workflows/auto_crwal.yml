@@ -69,13 +69,17 @@ jobs:
           git push
 
       - name: Publish dataset to public data repository
-        if: ${{ success() && secrets.PUBLIC_DATA_REPO != '' && secrets.PUBLIC_DATA_PAT != '' }}
+        if: success()
         env:
           PUBLIC_DATA_REPO: ${{ secrets.PUBLIC_DATA_REPO }}
           PUBLIC_DATA_BRANCH: ${{ secrets.PUBLIC_DATA_BRANCH }}
           PUBLIC_DATA_PAT: ${{ secrets.PUBLIC_DATA_PAT }}
         run: |
           set -euo pipefail
+          if [ -z "${PUBLIC_DATA_REPO:-}" ] || [ -z "${PUBLIC_DATA_PAT:-}" ]; then
+            echo "Public dataset secrets missing, skipping publish step."
+            exit 0
+          fi
           publish_dir="$(mktemp -d)"
           branch="${PUBLIC_DATA_BRANCH:-main}"
           repo_url="https://${PUBLIC_DATA_PAT}@github.com/${PUBLIC_DATA_REPO}.git"
