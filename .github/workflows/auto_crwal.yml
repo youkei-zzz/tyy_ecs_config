@@ -5,8 +5,8 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    # Run every day at 02:00 UTC (10:00 Beijing time)
-    - cron: '0 2 * * *'
+    # Run every day at 00:00 UTC (08:00 Beijing time)
+    - cron: '0 0 * * *'
 
 env:
   CRAWLER_SCRIPT: "完整爬取脚本.js"
