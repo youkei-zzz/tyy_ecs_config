@@ -11,6 +11,9 @@ on:
 env:
   CRAWLER_SCRIPT: "完整爬取脚本.js"
 
+permissions:
+  contents: write
+
 jobs:
   crawl:
     runs-on: ubuntu-latest
