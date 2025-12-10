@@ -6,6 +6,9 @@ const TARGET_URL = 'https://www.ctyun.cn/pricing/ecs';
 const SUCCESS_LOG_FILE = '成功日志.json';
 const ERROR_LOG_FILE = '错误日志.txt';
 const RESULTS_DIR = path.join(__dirname, '爬取结果');
+const DATA_DIR = path.join(__dirname, 'data');
+const METADATA_FILE = 'ecs-zones-metadata.json';
+const SIMPLE_FILE = 'ecs-zones-simple.json';
 
 const INITIAL_WAIT = 4000;
 const OPERATION_WAIT = 1200;
@@ -708,6 +711,55 @@ async function scrapeProvince(page, province, stats, successLog) {
   }
 }
 
+// 生成汇总数据文件到 data 目录
+function generateDataFiles(successLog) {
+  ensureDir(DATA_DIR);
+
+  // 构建 metadata 数据结构
+  const metadata = {
+    updatedAt: new Date().toISOString(),
+    totalRecords: Object.keys(successLog).length,
+    records: []
+  };
+
+  // 构建 simple 数据结构（简化列表）
+  const simpleList = [];
+
+  for (const record of Object.values(successLog)) {
+    // metadata 包含完整信息
+    metadata.records.push({
+      province: record.province,
+      pool: record.pool,
+      availabilityZone: record.zone,  // 可用区，可能为 null
+      cpuCount: record.cpuCount,
+      memCount: record.memCount,
+      timestamp: record.timestamp
+    });
+
+    // simple 只包含地区标识
+    simpleList.push({
+      province: record.province,
+      pool: record.pool,
+      availabilityZone: record.zone
+    });
+  }
+
+  // 按省份排序
+  metadata.records.sort((a, b) => a.province.localeCompare(b.province, 'zh-CN'));
+  simpleList.sort((a, b) => a.province.localeCompare(b.province, 'zh-CN'));
+
+  // 写入文件
+  const metadataPath = path.join(DATA_DIR, METADATA_FILE);
+  const simplePath = path.join(DATA_DIR, SIMPLE_FILE);
+
+  fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2), 'utf8');
+  fs.writeFileSync(simplePath, JSON.stringify(simpleList, null, 2), 'utf8');
+
+  log(`\n数据文件已生成:`);
+  log(`  - ${metadataPath}`);
+  log(`  - ${simplePath}`);
+}
+
 async function main() {
   // 清空错误日志
   const errorLogPath = path.join(__dirname, ERROR_LOG_FILE);
@@ -751,6 +803,10 @@ async function main() {
     log(`成功率: ${stats.total ? (((stats.success + stats.skipped) / stats.total) * 100).toFixed(1) : 0}%`);
     log(`总耗时: ${duration} 秒`);
     log('========================================\n');
+
+    // 生成 data 目录下的汇总文件
+    generateDataFiles(successLog);
+
     await browser.close();
     console.log(`成功日志: ${path.join(__dirname, SUCCESS_LOG_FILE)}`);
     console.log(`错误日志: ${errorLogPath}`);
