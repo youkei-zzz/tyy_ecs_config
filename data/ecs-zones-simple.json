@@ -1,0 +1,307 @@
+[
+  {
+    "province": "安徽",
+    "pool": "芜湖2",
+    "availabilityZone": null
+  },
+  {
+    "province": "安徽",
+    "pool": "合肥2",
+    "availabilityZone": null
+  },
+  {
+    "province": "安徽",
+    "pool": "芜湖4",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "北京",
+    "pool": "北京5",
+    "availabilityZone": null
+  },
+  {
+    "province": "重庆",
+    "pool": "重庆2",
+    "availabilityZone": null
+  },
+  {
+    "province": "福建",
+    "pool": "福州3",
+    "availabilityZone": null
+  },
+  {
+    "province": "福建",
+    "pool": "福州4",
+    "availabilityZone": null
+  },
+  {
+    "province": "福建",
+    "pool": "厦门3",
+    "availabilityZone": null
+  },
+  {
+    "province": "福建",
+    "pool": "福州25",
+    "availabilityZone": null
+  },
+  {
+    "province": "甘肃",
+    "pool": "兰州2",
+    "availabilityZone": null
+  },
+  {
+    "province": "甘肃",
+    "pool": "庆阳2",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "广东",
+    "pool": "佛山3",
+    "availabilityZone": null
+  },
+  {
+    "province": "广东",
+    "pool": "广州6",
+    "availabilityZone": null
+  },
+  {
+    "province": "广东",
+    "pool": "佛山7",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "广西",
+    "pool": "南宁2",
+    "availabilityZone": null
+  },
+  {
+    "province": "广西",
+    "pool": "南宁23",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "贵州",
+    "pool": "贵州3",
+    "availabilityZone": null
+  },
+  {
+    "province": "海南",
+    "pool": "海口2",
+    "availabilityZone": null
+  },
+  {
+    "province": "河北",
+    "pool": "石家庄20",
+    "availabilityZone": null
+  },
+  {
+    "province": "河南",
+    "pool": "郑州5",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "湖北",
+    "pool": "武汉3",
+    "availabilityZone": null
+  },
+  {
+    "province": "湖北",
+    "pool": "武汉4",
+    "availabilityZone": null
+  },
+  {
+    "province": "湖北",
+    "pool": "武汉41",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "湖南",
+    "pool": "长沙3",
+    "availabilityZone": null
+  },
+  {
+    "province": "湖南",
+    "pool": "郴州2",
+    "availabilityZone": null
+  },
+  {
+    "province": "湖南",
+    "pool": "长沙42",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "华北",
+    "pool": "华北2",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "华东",
+    "pool": "华东1",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "华南",
+    "pool": "华南2",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "江苏",
+    "pool": "南京2",
+    "availabilityZone": null
+  },
+  {
+    "province": "江苏",
+    "pool": "南京3",
+    "availabilityZone": null
+  },
+  {
+    "province": "江苏",
+    "pool": "南京4",
+    "availabilityZone": null
+  },
+  {
+    "province": "江苏",
+    "pool": "南京5",
+    "availabilityZone": null
+  },
+  {
+    "province": "江西",
+    "pool": "九江",
+    "availabilityZone": null
+  },
+  {
+    "province": "江西",
+    "pool": "南昌5",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "辽宁",
+    "pool": "辽阳1",
+    "availabilityZone": null
+  },
+  {
+    "province": "辽宁",
+    "pool": "沈阳8",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "内蒙",
+    "pool": "内蒙6",
+    "availabilityZone": null
+  },
+  {
+    "province": "内蒙",
+    "pool": "呼和浩特3",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "宁夏",
+    "pool": "中卫5",
+    "availabilityZone": null
+  },
+  {
+    "province": "青海",
+    "pool": "西宁2",
+    "availabilityZone": null
+  },
+  {
+    "province": "山东",
+    "pool": "青岛20",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "山东",
+    "pool": "山东青岛IT上云8",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "山西",
+    "pool": "晋中",
+    "availabilityZone": null
+  },
+  {
+    "province": "山西",
+    "pool": "太原4",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "陕西",
+    "pool": "西安3",
+    "availabilityZone": null
+  },
+  {
+    "province": "陕西",
+    "pool": "西安4",
+    "availabilityZone": null
+  },
+  {
+    "province": "陕西",
+    "pool": "西安5",
+    "availabilityZone": null
+  },
+  {
+    "province": "陕西",
+    "pool": "西安7",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "上海",
+    "pool": "上海7",
+    "availabilityZone": null
+  },
+  {
+    "province": "上海",
+    "pool": "上海36",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "四川",
+    "pool": "成都4",
+    "availabilityZone": null
+  },
+  {
+    "province": "西藏",
+    "pool": "拉萨3",
+    "availabilityZone": null
+  },
+  {
+    "province": "西南",
+    "pool": "西南2-贵州",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "西南",
+    "pool": "西南1",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "新疆",
+    "pool": "乌鲁木齐27",
+    "availabilityZone": null
+  },
+  {
+    "province": "新疆",
+    "pool": "乌鲁木齐7",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "新疆",
+    "pool": "新疆昌吉IT上云3",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "云南",
+    "pool": "昆明2",
+    "availabilityZone": null
+  },
+  {
+    "province": "浙江",
+    "pool": "杭州2",
+    "availabilityZone": null
+  },
+  {
+    "province": "浙江",
+    "pool": "杭州7",
+    "availabilityZone": "随机分配"
+  }
+]
