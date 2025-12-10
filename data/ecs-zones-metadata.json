@@ -1,0 +1,494 @@
+{
+  "updatedAt": "2025-12-10T03:26:11.012Z",
+  "totalRecords": 61,
+  "records": [
+    {
+      "province": "安徽",
+      "pool": "芜湖2",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:15:44.232Z"
+    },
+    {
+      "province": "安徽",
+      "pool": "合肥2",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:15:52.335Z"
+    },
+    {
+      "province": "安徽",
+      "pool": "芜湖4",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
+      "timestamp": "2025-12-10T03:16:01.715Z"
+    },
+    {
+      "province": "北京",
+      "pool": "北京5",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:16:13.050Z"
+    },
+    {
+      "province": "重庆",
+      "pool": "重庆2",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:16:24.581Z"
+    },
+    {
+      "province": "福建",
+      "pool": "福州3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
+      "timestamp": "2025-12-10T03:16:35.839Z"
+    },
+    {
+      "province": "福建",
+      "pool": "福州4",
+      "availabilityZone": null,
+      "cpuCount": 8,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:16:44.028Z"
+    },
+    {
+      "province": "福建",
+      "pool": "厦门3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
+      "timestamp": "2025-12-10T03:16:52.256Z"
+    },
+    {
+      "province": "福建",
+      "pool": "福州25",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:17:00.328Z"
+    },
+    {
+      "province": "甘肃",
+      "pool": "兰州2",
+      "availabilityZone": null,
+      "cpuCount": 14,
+      "memCount": 19,
+      "timestamp": "2025-12-10T03:17:11.585Z"
+    },
+    {
+      "province": "甘肃",
+      "pool": "庆阳2",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:17:21.229Z"
+    },
+    {
+      "province": "广东",
+      "pool": "佛山3",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:17:32.622Z"
+    },
+    {
+      "province": "广东",
+      "pool": "广州6",
+      "availabilityZone": null,
+      "cpuCount": 15,
+      "memCount": 19,
+      "timestamp": "2025-12-10T03:17:40.898Z"
+    },
+    {
+      "province": "广东",
+      "pool": "佛山7",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:17:50.327Z"
+    },
+    {
+      "province": "广西",
+      "pool": "南宁2",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:18:01.828Z"
+    },
+    {
+      "province": "广西",
+      "pool": "南宁23",
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:18:11.206Z"
+    },
+    {
+      "province": "贵州",
+      "pool": "贵州3",
+      "availabilityZone": null,
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:18:23.364Z"
+    },
+    {
+      "province": "海南",
+      "pool": "海口2",
+      "availabilityZone": null,
+      "cpuCount": 14,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:18:36.475Z"
+    },
+    {
+      "province": "河北",
+      "pool": "石家庄20",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:18:49.718Z"
+    },
+    {
+      "province": "河南",
+      "pool": "郑州5",
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:19:02.710Z"
+    },
+    {
+      "province": "湖北",
+      "pool": "武汉3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
+      "timestamp": "2025-12-10T03:19:54.050Z"
+    },
+    {
+      "province": "湖北",
+      "pool": "武汉4",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:20:02.232Z"
+    },
+    {
+      "province": "湖北",
+      "pool": "武汉41",
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:20:11.691Z"
+    },
+    {
+      "province": "湖南",
+      "pool": "长沙3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
+      "timestamp": "2025-12-10T03:20:23.183Z"
+    },
+    {
+      "province": "湖南",
+      "pool": "郴州2",
+      "availabilityZone": null,
+      "cpuCount": 14,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:20:31.275Z"
+    },
+    {
+      "province": "湖南",
+      "pool": "长沙42",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
+      "timestamp": "2025-12-10T03:20:40.650Z"
+    },
+    {
+      "province": "华北",
+      "pool": "华北2",
+      "availabilityZone": "随机分配",
+      "cpuCount": 19,
+      "memCount": 23,
+      "timestamp": "2025-12-10T03:19:15.459Z"
+    },
+    {
+      "province": "华东",
+      "pool": "华东1",
+      "availabilityZone": "随机分配",
+      "cpuCount": 16,
+      "memCount": 21,
+      "timestamp": "2025-12-10T03:19:29.352Z"
+    },
+    {
+      "province": "华南",
+      "pool": "华南2",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
+      "timestamp": "2025-12-10T03:19:42.643Z"
+    },
+    {
+      "province": "江苏",
+      "pool": "南京2",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:20:51.884Z"
+    },
+    {
+      "province": "江苏",
+      "pool": "南京3",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:21:00.082Z"
+    },
+    {
+      "province": "江苏",
+      "pool": "南京4",
+      "availabilityZone": null,
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:21:08.255Z"
+    },
+    {
+      "province": "江苏",
+      "pool": "南京5",
+      "availabilityZone": null,
+      "cpuCount": 14,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:21:16.402Z"
+    },
+    {
+      "province": "江西",
+      "pool": "九江",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:21:27.804Z"
+    },
+    {
+      "province": "江西",
+      "pool": "南昌5",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:21:37.122Z"
+    },
+    {
+      "province": "辽宁",
+      "pool": "辽阳1",
+      "availabilityZone": null,
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:21:48.524Z"
+    },
+    {
+      "province": "辽宁",
+      "pool": "沈阳8",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:21:57.969Z"
+    },
+    {
+      "province": "内蒙",
+      "pool": "内蒙6",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:22:09.444Z"
+    },
+    {
+      "province": "内蒙",
+      "pool": "呼和浩特3",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:22:18.784Z"
+    },
+    {
+      "province": "宁夏",
+      "pool": "中卫5",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:22:30.035Z"
+    },
+    {
+      "province": "青海",
+      "pool": "西宁2",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:22:41.410Z"
+    },
+    {
+      "province": "山东",
+      "pool": "青岛20",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:23:31.143Z"
+    },
+    {
+      "province": "山东",
+      "pool": "山东青岛IT上云8",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:23:40.427Z"
+    },
+    {
+      "province": "山西",
+      "pool": "晋中",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:24:12.641Z"
+    },
+    {
+      "province": "山西",
+      "pool": "太原4",
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:24:22.114Z"
+    },
+    {
+      "province": "陕西",
+      "pool": "西安3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:22:52.829Z"
+    },
+    {
+      "province": "陕西",
+      "pool": "西安4",
+      "availabilityZone": null,
+      "cpuCount": 8,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:23:00.994Z"
+    },
+    {
+      "province": "陕西",
+      "pool": "西安5",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:23:09.020Z"
+    },
+    {
+      "province": "陕西",
+      "pool": "西安7",
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
+      "memCount": 18,
+      "timestamp": "2025-12-10T03:23:18.417Z"
+    },
+    {
+      "province": "上海",
+      "pool": "上海7",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:23:51.823Z"
+    },
+    {
+      "province": "上海",
+      "pool": "上海36",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
+      "timestamp": "2025-12-10T03:24:01.190Z"
+    },
+    {
+      "province": "四川",
+      "pool": "成都4",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:24:33.531Z"
+    },
+    {
+      "province": "西藏",
+      "pool": "拉萨3",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "timestamp": "2025-12-10T03:25:37.119Z"
+    },
+    {
+      "province": "西南",
+      "pool": "西南2-贵州",
+      "availabilityZone": "随机分配",
+      "cpuCount": 14,
+      "memCount": 19,
+      "timestamp": "2025-12-10T03:24:46.132Z"
+    },
+    {
+      "province": "西南",
+      "pool": "西南1",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
+      "timestamp": "2025-12-10T03:24:55.636Z"
+    },
+    {
+      "province": "新疆",
+      "pool": "乌鲁木齐27",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:25:07.043Z"
+    },
+    {
+      "province": "新疆",
+      "pool": "乌鲁木齐7",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "timestamp": "2025-12-10T03:25:16.492Z"
+    },
+    {
+      "province": "新疆",
+      "pool": "新疆昌吉IT上云3",
+      "availabilityZone": "随机分配",
+      "cpuCount": 7,
+      "memCount": 10,
+      "timestamp": "2025-12-10T03:25:25.757Z"
+    },
+    {
+      "province": "云南",
+      "pool": "昆明2",
+      "availabilityZone": null,
+      "cpuCount": 14,
+      "memCount": 19,
+      "timestamp": "2025-12-10T03:25:48.397Z"
+    },
+    {
+      "province": "浙江",
+      "pool": "杭州2",
+      "availabilityZone": null,
+      "cpuCount": 14,
+      "memCount": 19,
+      "timestamp": "2025-12-10T03:25:59.983Z"
+    },
+    {
+      "province": "浙江",
+      "pool": "杭州7",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 19,
+      "timestamp": "2025-12-10T03:26:09.511Z"
+    }
+  ]
+}
