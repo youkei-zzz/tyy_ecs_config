@@ -134,14 +134,16 @@ function shouldScrape(successLog, province, pool, zone) {
   return true;
 }
 
-function recordSuccess(successLog, province, pool, zone, cpuCount, memCount) {
+function recordSuccess(successLog, province, pool, zone, cpuOptions, memoryOptions) {
   const key = getSuccessKey(province, pool, zone);
   successLog[key] = {
     province,
     pool,
     zone,
-    cpuCount,
-    memCount,
+    cpuCount: cpuOptions.length,
+    memCount: memoryOptions.length,
+    cpuOptions,
+    memoryOptions,
     timestamp: new Date().toISOString()
   };
   saveSuccessLog(successLog);
@@ -654,7 +656,7 @@ async function scrapeZoneData(page, province, poolName, zoneName, zoneDescriptor
     updatedAt: new Date().toISOString()
   };
   fs.writeFileSync(path.join(outputDir, 'zone-data.json'), JSON.stringify(metadata, null, 2), 'utf8');
-  recordSuccess(successLog, province, poolName, zoneName, cpuOptions.length, memOptions.length);
+  recordSuccess(successLog, province, poolName, zoneName, cpuOptions, memOptions);
   return { success: true };
 }
 
@@ -733,6 +735,8 @@ function generateDataFiles(successLog) {
       availabilityZone: record.zone,  // 可用区，可能为 null
       cpuCount: record.cpuCount,
       memCount: record.memCount,
+      cpuOptions: record.cpuOptions || [],
+      memoryOptions: record.memoryOptions || [],
       timestamp: record.timestamp
     });
 
