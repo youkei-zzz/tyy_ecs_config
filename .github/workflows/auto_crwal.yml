@@ -142,7 +142,7 @@ jobs:
           ====================================
           执行结果: ${status}
           执行时长: ${time_str}
-          完成时间 (Asia/Shanghai): $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
+          完成时间: $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
 
           数据源链接:
           - Metadata: https://raw.githubusercontent.com/${{ github.repository }}/main/data/ecs-zones-metadata.json
