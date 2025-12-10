@@ -1,4 +1,7 @@
 /node_modules
+*.txt
+*.xlsm
+zone-data.json
 /tmp.js
 /上海
 /云南

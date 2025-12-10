@@ -5,14 +5,12 @@ const path = require('path');
 const TARGET_URL = 'https://www.ctyun.cn/pricing/ecs';
 const SUCCESS_LOG_FILE = '成功日志.json';
 const ERROR_LOG_FILE = '错误日志.txt';
-const CONSOLE_LOG_FILE = '运行日志.txt';
+const RESULTS_DIR = path.join(__dirname, '爬取结果');
 
 const INITIAL_WAIT = 4000;
 const OPERATION_WAIT = 1200;
 const AFTER_SELECT_WAIT = 1800;
 const CLICK_WAIT = 350;
-const CACHE_VALIDITY_DAYS = 2;
-const DEFAULT_ZONE_NAME = '默认可用区';
 const DEFAULT_VIEWPORT = { width: 1920, height: 1080 };
 const DEFAULT_BROWSER_ARGS = [
   '--disable-blink-features=AutomationControlled',
@@ -66,8 +64,9 @@ const SELECTORS = {
     '/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[2]/form/div[2]/div/div/label'
   ],
   availabilityZones: [
-    'css=.el-form-item:has-text("可用区") .el-radio-group label',
-    'css=.el-form-item:has-text("可用区域") .el-radio-group label',
+    // 精确匹配：label文本必须是"可用区"，排除"付费类型"等干扰
+    'css=.el-form-item:has(>div.el-form-item__label:text-is("可用区")) .el-radio-group label',
+    'css=.el-form-item:has(>label:text-is("可用区")) .el-radio-group label',
     '/html/body/div[1]/div/section[2]/div/div[2]/div[2]/div[2]/div/div/div/div[2]/div[2]/div[1]/div[3]/form/div/div[2]/div/label'
   ],
   cpuSelect: [
@@ -96,11 +95,8 @@ const SELECTORS = {
   ]
 };
 
-function log(message, level = 'INFO') {
-  const timestamp = new Date().toISOString();
-  const line = `[${timestamp}] [${level}] ${message}\n`;
+function log(message) {
   console.log(message);
-  fs.appendFileSync(path.join(__dirname, CONSOLE_LOG_FILE), line, 'utf8');
 }
 
 function loadSuccessLog() {
@@ -129,16 +125,10 @@ function shouldScrape(successLog, province, pool, zone) {
   const key = getSuccessKey(province, pool, zone);
   if (!successLog[key]) {
     log(`  → 首次爬取: ${key}`);
-    return true;
+  } else {
+    log(`  → 重新爬取: ${key}`);
   }
-  const last = new Date(successLog[key].timestamp);
-  const diffDays = (Date.now() - last.getTime()) / (1000 * 60 * 60 * 24);
-  if (diffDays > CACHE_VALIDITY_DAYS) {
-    log(`  → 缓存过期(${diffDays.toFixed(1)}天前): ${key}`);
-    return true;
-  }
-  log(`  → 跳过(${diffDays.toFixed(1)}天前成功): ${key}`);
-  return false;
+  return true;
 }
 
 function recordSuccess(successLog, province, pool, zone, cpuCount, memCount) {
@@ -157,8 +147,9 @@ function recordSuccess(successLog, province, pool, zone, cpuCount, memCount) {
 function logError(province, pool, zone, error, stack = '') {
   const timestamp = new Date().toISOString();
   const zoneLabel = zone ? ` - ${zone}` : '';
-  const line = `[${timestamp}] ${province} - ${pool}${zoneLabel}: ${error}\n${stack}\n${'='.repeat(80)}\n`;
+  const line = `[${timestamp}] ${province} - ${pool}${zoneLabel}: ${error}\n${stack ? `堆栈: ${stack}\n` : ''}${'='.repeat(60)}\n`;
   fs.appendFileSync(path.join(__dirname, ERROR_LOG_FILE), line, 'utf8');
+  log(`  ✗ ${province} - ${pool}${zoneLabel}: ${error}`);
 }
 
 function ensureDir(dir) {
@@ -282,9 +273,9 @@ async function logProvinceDropdownDebug(page) {
         hasAreaList: !!el.querySelector('ul.arealist')
       }));
     });
-    log(`  ⚠ ʡ�����б�״̬: ${JSON.stringify(info)}`, 'WARN');
+    log(`  ⚠ 省份下拉列表状态: ${JSON.stringify(info)}`);
   } catch (error) {
-    log(`  ⚠ ʡ�����б�����ʧ��: ${error.message}`, 'WARN');
+    log(`  ⚠ 省份下拉列表调试失败: ${error.message}`);
   }
 }
 
@@ -404,10 +395,10 @@ async function selectProvince(page, provinceName) {
     try {
       await openProvinceDropdown(page);
       await page.waitForTimeout(CLICK_WAIT);
-      const { locator } = await resolveFirstLocator(page, SELECTORS.provinceItems, '????��?');
+      const { locator } = await resolveFirstLocator(page, SELECTORS.provinceItems, '省份列表');
       const options = locator.filter({ hasText: provinceName });
       const count = await options.count();
-      if (!count) throw new Error(`��?????? ${provinceName}`);
+      if (!count) throw new Error(`未找到省份: ${provinceName}`);
       for (let i = count - 1; i >= 0; i--) {
         const option = options.nth(i);
         if (await option.isVisible()) {
@@ -417,7 +408,7 @@ async function selectProvince(page, provinceName) {
           return;
         }
       }
-      throw new Error(`??? ${provinceName} ?????`);
+      throw new Error(`省份 ${provinceName} 不可见`);
     } catch (error) {
       if (attempt === 2) {
         await logProvinceDropdownDebug(page);
@@ -447,8 +438,27 @@ async function selectResourcePool(page, pool) {
   await page.waitForTimeout(AFTER_SELECT_WAIT);
 }
 
+// 非可用区的关键词，用于过滤误匹配
+const INVALID_ZONE_KEYWORDS = ['付费', '包年', '包月', '按需', '按量', '预付', '后付'];
+
+function isValidZoneName(name) {
+  if (!name) return false;
+  // 有效的可用区名称通常是：可用区1、可用区2、随机分配、AZ1、AZ2 等
+  // 排除付费类型
+  for (const keyword of INVALID_ZONE_KEYWORDS) {
+    if (name.includes(keyword)) return false;
+  }
+  return true;
+}
+
 async function getAvailabilityZones(page) {
-  return await collectRadioOptions(page, SELECTORS.availabilityZones, '可用区');
+  const zones = await collectRadioOptions(page, SELECTORS.availabilityZones, '可用区');
+  // 过滤掉误匹配的付费类型选项
+  const validZones = zones.filter(z => isValidZoneName(z.name));
+  if (zones.length > 0 && validZones.length === 0) {
+    log(`  ⚠ 检测到的"可用区"实为付费类型，已过滤: ${zones.map(z => z.name).join(', ')}`, 'WARN');
+  }
+  return validZones;
 }
 
 async function selectAvailabilityZone(page, zone) {
@@ -632,37 +642,56 @@ async function scrapeZoneData(page, province, poolName, zoneName, zoneDescriptor
   fs.writeFileSync(path.join(outputDir, 'CPU-可选项.txt'), cpuOptions.join('\n'), 'utf8');
   fs.writeFileSync(path.join(outputDir, '内存-可选项.txt'), memOptions.join('\n'), 'utf8');
   log(`    ✓ ${zoneName} 选项已保存 (CPU:${cpuOptions.length} / 内存:${memOptions.length})`);
+  const metadata = {
+    provinceName: province,
+    poolName,
+    zoneName,
+    cpuOptions,
+    memoryOptions: memOptions,
+    updatedAt: new Date().toISOString()
+  };
+  fs.writeFileSync(path.join(outputDir, 'zone-data.json'), JSON.stringify(metadata, null, 2), 'utf8');
   recordSuccess(successLog, province, poolName, zoneName, cpuOptions.length, memOptions.length);
   return { success: true };
 }
 
 async function scrapeResourcePool(page, province, pool, stats, successLog) {
   await selectResourcePool(page, pool);
-  const poolDir = path.join(__dirname, sanitizeName(province), sanitizeName(`${province}-${pool.name}`));
+  const poolDir = path.join(RESULTS_DIR, sanitizeName(province), sanitizeName(`${province}-${pool.name}`));
   ensureDir(poolDir);
 
+  // 简化逻辑：如果有可用区就选第一个，没有就跳过
   const zones = await getAvailabilityZones(page);
-  const zoneList = zones.length ? zones : [{ name: DEFAULT_ZONE_NAME }];
+  let zoneName = null;
+  let zoneDescriptor = null;
 
-  for (const zone of zoneList) {
-    const zoneName = zone.name || DEFAULT_ZONE_NAME;
-    const zoneDir = path.join(poolDir, sanitizeName(zoneName));
-    try {
-      const result = await scrapeZoneData(page, province, pool.name, zoneName, zone.selector ? zone : null, zoneDir, successLog);
-      stats.total++;
-      if (result.skipped) {
-        stats.skipped++;
-      } else if (result.success) {
-        stats.success++;
-      }
-    } catch (error) {
-      stats.total++;
-      stats.failed++;
-      log(`  ✗ 失败: ${province} - ${pool.name} - ${zoneName} - ${error.message}`, 'ERROR');
-      logError(province, pool.name, zoneName, error.message, error.stack || '');
-    }
-    await page.waitForTimeout(700);
+  if (zones.length > 0) {
+    // 有可用区，选第一个
+    zoneDescriptor = zones[0];
+    zoneName = zones[0].name;
+    log(`  ℹ 检测到 ${zones.length} 个可用区，选择第一个: ${zoneName}`);
+  } else {
+    // 没有可用区，不需要选择
+    zoneName = null;
+    log(`  ℹ 该资源池无可用区选项`);
   }
+
+  try {
+    const result = await scrapeZoneData(page, province, pool.name, zoneName, zoneDescriptor, poolDir, successLog);
+    stats.total++;
+    if (result.skipped) {
+      stats.skipped++;
+    } else if (result.success) {
+      stats.success++;
+    }
+  } catch (error) {
+    stats.total++;
+    stats.failed++;
+    const zoneLabel = zoneName || '无可用区';
+    log(`  ✗ 失败: ${province} - ${pool.name} - ${zoneLabel} - ${error.message}`, 'ERROR');
+    logError(province, pool.name, zoneLabel, error.message, error.stack || '');
+  }
+  await page.waitForTimeout(700);
 }
 
 async function scrapeProvince(page, province, stats, successLog) {
@@ -680,8 +709,9 @@ async function scrapeProvince(page, province, stats, successLog) {
 }
 
 async function main() {
-  const consoleLogPath = path.join(__dirname, CONSOLE_LOG_FILE);
-  if (fs.existsSync(consoleLogPath)) fs.unlinkSync(consoleLogPath);
+  // 清空错误日志
+  const errorLogPath = path.join(__dirname, ERROR_LOG_FILE);
+  if (fs.existsSync(errorLogPath)) fs.unlinkSync(errorLogPath);
 
   const successLog = loadSuccessLog();
   log(`已加载成功日志，共 ${Object.keys(successLog).length} 条记录`);
@@ -723,8 +753,7 @@ async function main() {
     log('========================================\n');
     await browser.close();
     console.log(`成功日志: ${path.join(__dirname, SUCCESS_LOG_FILE)}`);
-    console.log(`错误日志: ${path.join(__dirname, ERROR_LOG_FILE)}`);
-    console.log(`运行日志: ${consoleLogPath}`);
+    console.log(`错误日志: ${errorLogPath}`);
   }
 }
 
