@@ -26,16 +26,6 @@
   },
   {
     "province": "福建",
-    "pool": "福州3",
-    "availabilityZone": null
-  },
-  {
-    "province": "福建",
-    "pool": "福州4",
-    "availabilityZone": null
-  },
-  {
-    "province": "福建",
     "pool": "厦门3",
     "availabilityZone": null
   },
@@ -71,11 +61,6 @@
   },
   {
     "province": "广西",
-    "pool": "南宁2",
-    "availabilityZone": null
-  },
-  {
-    "province": "广西",
     "pool": "南宁23",
     "availabilityZone": "随机分配"
   },
@@ -101,11 +86,6 @@
   },
   {
     "province": "湖北",
-    "pool": "武汉3",
-    "availabilityZone": null
-  },
-  {
-    "province": "湖北",
     "pool": "武汉4",
     "availabilityZone": null
   },
@@ -113,11 +93,6 @@
     "province": "湖北",
     "pool": "武汉41",
     "availabilityZone": "随机分配"
-  },
-  {
-    "province": "湖南",
-    "pool": "长沙3",
-    "availabilityZone": null
   },
   {
     "province": "湖南",
@@ -223,11 +198,6 @@
     "province": "山西",
     "pool": "太原4",
     "availabilityZone": "随机分配"
-  },
-  {
-    "province": "陕西",
-    "pool": "西安3",
-    "availabilityZone": null
   },
   {
     "province": "陕西",
