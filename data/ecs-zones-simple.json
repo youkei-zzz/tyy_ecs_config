@@ -55,6 +55,51 @@
     "availabilityZone": "随机分配"
   },
   {
+    "province": "港澳及海外",
+    "pool": "澳门1",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "迪拜1",
+    "availabilityZone": null
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "法兰克福1",
+    "availabilityZone": null
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "圣保罗1",
+    "availabilityZone": null
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "香港1",
+    "availabilityZone": null
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "香港2",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "新加坡3",
+    "availabilityZone": null
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "新加坡4",
+    "availabilityZone": "随机分配"
+  },
+  {
+    "province": "港澳及海外",
+    "pool": "印度尼西亚1",
+    "availabilityZone": "随机分配"
+  },
+  {
     "province": "广东",
     "pool": "佛山3",
     "availabilityZone": null
