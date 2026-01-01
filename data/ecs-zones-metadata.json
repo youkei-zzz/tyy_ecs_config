@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2025-12-31T01:43:22.073Z",
+  "updatedAt": "2026-01-01T01:57:07.494Z",
   "totalRecords": 70,
   "records": [
     {
@@ -42,13 +42,13 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:27:27.664Z"
+      "timestamp": "2026-01-01T01:45:08.490Z"
     },
     {
       "province": "安徽",
       "pool": "芜湖2",
       "availabilityZone": null,
-      "cpuCount": 13,
+      "cpuCount": 7,
       "memCount": 10,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -56,14 +56,8 @@
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -77,7 +71,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2025-12-31T01:27:35.854Z"
+      "timestamp": "2026-01-01T01:45:16.807Z"
     },
     {
       "province": "安徽",
@@ -124,61 +118,14 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2025-12-31T01:27:45.432Z"
+      "timestamp": "2026-01-01T01:45:26.388Z"
     },
     {
       "province": "北京",
       "pool": "北京5",
-      "availabilityZone": "随机分配",
-      "cpuCount": 15,
-      "memCount": 20,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
-        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
-        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
-        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
-        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
-      ],
-      "timestamp": "2025-12-31T01:27:58.006Z"
-    },
-    {
-      "province": "重庆",
-      "pool": "重庆2",
       "availabilityZone": null,
       "cpuCount": 13,
-      "memCount": 15,
+      "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
@@ -193,99 +140,6 @@
         "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
         "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
         "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
-      ],
-      "timestamp": "2025-12-31T01:28:09.513Z"
-    },
-    {
-      "province": "福建",
-      "pool": "福州3",
-      "availabilityZone": null,
-      "cpuCount": 10,
-      "memCount": 9,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
-      ],
-      "timestamp": "2025-12-31T01:28:20.855Z"
-    },
-    {
-      "province": "福建",
-      "pool": "福州4",
-      "availabilityZone": null,
-      "cpuCount": 7,
-      "memCount": 9,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
-      ],
-      "timestamp": "2025-12-31T01:28:28.985Z"
-    },
-    {
-      "province": "福建",
-      "pool": "福州25",
-      "availabilityZone": null,
-      "cpuCount": 7,
-      "memCount": 17,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -306,14 +160,109 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:28:37.157Z"
+      "timestamp": "2026-01-01T01:45:37.810Z"
+    },
+    {
+      "province": "重庆",
+      "pool": "重庆2",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
+      ],
+      "timestamp": "2026-01-01T01:45:49.412Z"
     },
     {
       "province": "福建",
-      "pool": "厦门3",
+      "pool": "福州3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
+      ],
+      "timestamp": "2026-01-01T01:46:00.828Z"
+    },
+    {
+      "province": "福建",
+      "pool": "福州4",
+      "availabilityZone": null,
+      "cpuCount": 8,
+      "memCount": 10,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
+      ],
+      "timestamp": "2026-01-01T01:46:09.216Z"
+    },
+    {
+      "province": "福建",
+      "pool": "福州25",
       "availabilityZone": null,
       "cpuCount": 13,
-      "memCount": 9,
+      "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
@@ -336,31 +285,34 @@
         "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
         "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
         "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "224G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:28:45.296Z"
+      "timestamp": "2026-01-01T01:46:17.550Z"
     },
     {
-      "province": "甘肃",
-      "pool": "兰州2",
-      "availabilityZone": "随机分配",
-      "cpuCount": 12,
-      "memCount": 17,
+      "province": "福建",
+      "pool": "厦门3",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -369,23 +321,15 @@
         "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
         "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
         "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:30:22.530Z"
+      "timestamp": "2026-01-01T01:46:25.733Z"
     },
     {
       "province": "甘肃",
-      "pool": "庆阳2",
+      "pool": "兰州2",
       "availabilityZone": null,
       "cpuCount": 14,
       "memCount": 19,
@@ -426,7 +370,48 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2025-12-31T01:30:31.877Z"
+      "timestamp": "2026-01-01T01:48:00.514Z"
+    },
+    {
+      "province": "甘肃",
+      "pool": "庆阳2",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
+      ],
+      "timestamp": "2026-01-01T01:48:11.813Z"
     },
     {
       "province": "港澳及海外",
@@ -467,44 +452,11 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:28:58.152Z"
+      "timestamp": "2026-01-01T01:46:38.602Z"
     },
     {
       "province": "港澳及海外",
       "pool": "迪拜1",
-      "availabilityZone": "随机分配",
-      "cpuCount": 12,
-      "memCount": 9,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
-      ],
-      "timestamp": "2025-12-31T01:29:07.593Z"
-    },
-    {
-      "province": "港澳及海外",
-      "pool": "法兰克福1",
       "availabilityZone": null,
       "cpuCount": 6,
       "memCount": 9,
@@ -527,7 +479,35 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:29:15.733Z"
+      "timestamp": "2026-01-01T01:46:46.832Z"
+    },
+    {
+      "province": "港澳及海外",
+      "pool": "法兰克福1",
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
+      ],
+      "timestamp": "2026-01-01T01:46:54.949Z"
     },
     {
       "province": "港澳及海外",
@@ -555,7 +535,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:29:23.861Z"
+      "timestamp": "2026-01-01T01:47:03.204Z"
     },
     {
       "province": "港澳及海外",
@@ -583,22 +563,27 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:29:31.985Z"
+      "timestamp": "2026-01-01T01:47:11.582Z"
     },
     {
       "province": "港澳及海外",
       "pool": "香港2",
-      "availabilityZone": null,
-      "cpuCount": 7,
-      "memCount": 9,
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -607,11 +592,19 @@
         "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
         "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
         "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:29:40.098Z"
+      "timestamp": "2026-01-01T01:47:21.082Z"
     },
     {
       "province": "港澳及海外",
@@ -638,7 +631,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:29:48.225Z"
+      "timestamp": "2026-01-01T01:47:29.235Z"
     },
     {
       "province": "港澳及海外",
@@ -679,7 +672,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:29:58.816Z"
+      "timestamp": "2026-01-01T01:47:39.066Z"
     },
     {
       "province": "港澳及海外",
@@ -720,11 +713,48 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:30:08.761Z"
+      "timestamp": "2026-01-01T01:47:48.649Z"
     },
     {
       "province": "广东",
       "pool": "佛山3",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
+      ],
+      "timestamp": "2026-01-01T01:48:26.109Z"
+    },
+    {
+      "province": "广东",
+      "pool": "佛山7",
       "availabilityZone": "随机分配",
       "cpuCount": 12,
       "memCount": 17,
@@ -761,49 +791,12 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:30:45.398Z"
-    },
-    {
-      "province": "广东",
-      "pool": "佛山7",
-      "availabilityZone": null,
-      "cpuCount": 10,
-      "memCount": 15,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
-      ],
-      "timestamp": "2025-12-31T01:30:53.563Z"
+      "timestamp": "2026-01-01T01:48:35.713Z"
     },
     {
       "province": "广东",
       "pool": "广州6",
-      "availabilityZone": "随机分配",
+      "availabilityZone": null,
       "cpuCount": 15,
       "memCount": 19,
       "cpuOptions": [
@@ -844,13 +837,13 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2025-12-31T01:31:03.006Z"
+      "timestamp": "2026-01-01T01:48:44.046Z"
     },
     {
       "province": "广西",
       "pool": "南宁2",
       "availabilityZone": null,
-      "cpuCount": 8,
+      "cpuCount": 7,
       "memCount": 10,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -858,9 +851,8 @@
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)"
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -874,13 +866,13 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2025-12-31T01:35:19.451Z"
+      "timestamp": "2026-01-01T01:48:55.345Z"
     },
     {
       "province": "广西",
       "pool": "南宁23",
-      "availabilityZone": null,
-      "cpuCount": 7,
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
       "memCount": 18,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -888,8 +880,14 @@
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -911,7 +909,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:35:27.773Z"
+      "timestamp": "2026-01-01T01:49:04.849Z"
     },
     {
       "province": "贵州",
@@ -952,7 +950,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:35:39.236Z"
+      "timestamp": "2026-01-01T01:49:16.295Z"
     },
     {
       "province": "海南",
@@ -996,7 +994,7 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:35:50.904Z"
+      "timestamp": "2026-01-01T01:49:27.956Z"
     },
     {
       "province": "河北",
@@ -1033,7 +1031,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:36:02.228Z"
+      "timestamp": "2026-01-01T01:49:39.526Z"
     },
     {
       "province": "河南",
@@ -1076,31 +1074,22 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:36:14.786Z"
+      "timestamp": "2026-01-01T01:49:52.583Z"
     },
     {
       "province": "湖北",
       "pool": "武汉3",
-      "availabilityZone": "随机分配",
-      "cpuCount": 16,
-      "memCount": 21,
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
-        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
-        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)",
-        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(16)"
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1109,30 +1098,18 @@
         "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
         "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
         "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
-        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
-        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)",
-        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(21)"
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:37:05.615Z"
+      "timestamp": "2026-01-01T01:50:46.374Z"
     },
     {
       "province": "湖北",
       "pool": "武汉4",
       "availabilityZone": null,
-      "cpuCount": 16,
-      "memCount": 21,
+      "cpuCount": 10,
+      "memCount": 15,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
@@ -1143,13 +1120,7 @@
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
-        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
-        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)",
-        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(16)"
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1166,15 +1137,9 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
         "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
-        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
-        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)",
-        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(21)"
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:37:13.833Z"
+      "timestamp": "2026-01-01T01:50:54.757Z"
     },
     {
       "province": "湖北",
@@ -1217,28 +1182,22 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:37:23.383Z"
+      "timestamp": "2026-01-01T01:51:04.228Z"
     },
     {
       "province": "湖南",
       "pool": "长沙3",
-      "availabilityZone": "随机分配",
-      "cpuCount": 13,
-      "memCount": 18,
+      "availabilityZone": null,
+      "cpuCount": 7,
+      "memCount": 9,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1247,27 +1206,18 @@
         "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
         "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
         "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2025-12-31T01:37:36.032Z"
+      "timestamp": "2026-01-01T01:51:15.723Z"
     },
     {
       "province": "湖南",
       "pool": "长沙42",
-      "availabilityZone": null,
-      "cpuCount": 13,
-      "memCount": 18,
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
@@ -1278,10 +1228,12 @@
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
+        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
+        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1298,17 +1250,19 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
         "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
+        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
+        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
+        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2025-12-31T01:37:44.183Z"
+      "timestamp": "2026-01-01T01:51:25.411Z"
     },
     {
       "province": "湖南",
       "pool": "郴州2",
-      "availabilityZone": "随机分配",
+      "availabilityZone": null,
       "cpuCount": 14,
       "memCount": 18,
       "cpuOptions": [
@@ -1347,57 +1301,14 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:37:54.097Z"
+      "timestamp": "2026-01-01T01:51:33.657Z"
     },
     {
       "province": "华北",
       "pool": "华北2",
       "availabilityZone": "随机分配",
-      "cpuCount": 13,
-      "memCount": 18,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
-      ],
-      "timestamp": "2025-12-31T01:36:27.320Z"
-    },
-    {
-      "province": "华东",
-      "pool": "华东1",
-      "availabilityZone": "随机分配",
-      "cpuCount": 20,
-      "memCount": 25,
+      "cpuCount": 19,
+      "memCount": 24,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
@@ -1407,18 +1318,17 @@
         "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "18核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "20核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "36核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)",
-        "72核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(16)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(17)",
-        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(18)",
-        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(19)",
-        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(20)"
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "36核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
+        "72核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(16)",
+        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(17)",
+        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(18)",
+        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(19)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1435,23 +1345,22 @@
         "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
         "144G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "164G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "288G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(21)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(22)",
-        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(23)",
-        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(24)",
-        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(25)"
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "288G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
+        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(21)",
+        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(22)",
+        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(23)",
+        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(24)"
       ],
-      "timestamp": "2025-12-31T01:36:40.039Z"
+      "timestamp": "2026-01-01T01:50:06.143Z"
     },
     {
-      "province": "华南",
-      "pool": "华南2",
+      "province": "华东",
+      "pool": "华东1",
       "availabilityZone": "随机分配",
       "cpuCount": 16,
       "memCount": 21,
@@ -1496,7 +1405,54 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(21)"
       ],
-      "timestamp": "2025-12-31T01:36:53.009Z"
+      "timestamp": "2026-01-01T01:50:21.040Z"
+    },
+    {
+      "province": "华南",
+      "pool": "华南2",
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
+      "memCount": 20,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
+        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
+        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
+        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
+        "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
+      ],
+      "timestamp": "2026-01-01T01:50:34.903Z"
     },
     {
       "province": "江苏",
@@ -1525,7 +1481,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2025-12-31T01:38:05.407Z"
+      "timestamp": "2026-01-01T01:51:45.039Z"
     },
     {
       "province": "江苏",
@@ -1562,50 +1518,11 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:38:13.719Z"
+      "timestamp": "2026-01-01T01:51:53.302Z"
     },
     {
       "province": "江苏",
       "pool": "南京4",
-      "availabilityZone": null,
-      "cpuCount": 10,
-      "memCount": 17,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
-      ],
-      "timestamp": "2025-12-31T01:38:21.900Z"
-    },
-    {
-      "province": "江苏",
-      "pool": "南京5",
       "availabilityZone": null,
       "cpuCount": 12,
       "memCount": 17,
@@ -1642,11 +1559,11 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:38:30.047Z"
+      "timestamp": "2026-01-01T01:52:01.706Z"
     },
     {
-      "province": "江西",
-      "pool": "九江",
+      "province": "江苏",
+      "pool": "南京5",
       "availabilityZone": null,
       "cpuCount": 14,
       "memCount": 18,
@@ -1686,11 +1603,11 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:38:41.686Z"
+      "timestamp": "2026-01-01T01:52:09.974Z"
     },
     {
       "province": "江西",
-      "pool": "南昌5",
+      "pool": "九江",
       "availabilityZone": null,
       "cpuCount": 13,
       "memCount": 17,
@@ -1728,7 +1645,48 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:38:49.831Z"
+      "timestamp": "2026-01-01T01:52:21.404Z"
+    },
+    {
+      "province": "江西",
+      "pool": "南昌5",
+      "availabilityZone": "随机分配",
+      "cpuCount": 12,
+      "memCount": 17,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
+      ],
+      "timestamp": "2026-01-01T01:52:30.856Z"
     },
     {
       "province": "辽宁",
@@ -1769,12 +1727,12 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:39:01.293Z"
+      "timestamp": "2026-01-01T01:52:42.295Z"
     },
     {
       "province": "辽宁",
       "pool": "沈阳8",
-      "availabilityZone": null,
+      "availabilityZone": "随机分配",
       "cpuCount": 12,
       "memCount": 17,
       "cpuOptions": [
@@ -1810,7 +1768,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:39:09.462Z"
+      "timestamp": "2026-01-01T01:52:51.721Z"
     },
     {
       "province": "内蒙",
@@ -1851,13 +1809,13 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:39:22.027Z"
+      "timestamp": "2026-01-01T01:53:04.386Z"
     },
     {
       "province": "内蒙",
       "pool": "内蒙6",
-      "availabilityZone": "随机分配",
-      "cpuCount": 12,
+      "availabilityZone": null,
+      "cpuCount": 13,
       "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -1871,7 +1829,8 @@
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
         "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
         "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
+        "80核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1888,56 +1847,15 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
         "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
+        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:39:31.448Z"
+      "timestamp": "2026-01-01T01:53:12.988Z"
     },
     {
       "province": "宁夏",
       "pool": "中卫5",
-      "availabilityZone": null,
-      "cpuCount": 12,
-      "memCount": 17,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
-      ],
-      "timestamp": "2025-12-31T01:39:42.860Z"
-    },
-    {
-      "province": "青海",
-      "pool": "西宁2",
       "availabilityZone": null,
       "cpuCount": 13,
       "memCount": 17,
@@ -1975,7 +1893,44 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:39:54.210Z"
+      "timestamp": "2026-01-01T01:53:24.505Z"
+    },
+    {
+      "province": "青海",
+      "pool": "西宁2",
+      "availabilityZone": null,
+      "cpuCount": 10,
+      "memCount": 15,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
+      ],
+      "timestamp": "2026-01-01T01:53:36.254Z"
     },
     {
       "province": "山东",
@@ -2016,7 +1971,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:40:44.308Z"
+      "timestamp": "2026-01-01T01:54:26.384Z"
     },
     {
       "province": "山东",
@@ -2057,7 +2012,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:40:53.711Z"
+      "timestamp": "2026-01-01T01:54:35.797Z"
     },
     {
       "province": "山西",
@@ -2094,13 +2049,13 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:41:25.955Z"
+      "timestamp": "2026-01-01T01:55:08.146Z"
     },
     {
       "province": "山西",
       "pool": "太原4",
-      "availabilityZone": null,
-      "cpuCount": 10,
+      "availabilityZone": "随机分配",
+      "cpuCount": 13,
       "memCount": 18,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -2112,7 +2067,10 @@
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -2134,7 +2092,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:41:34.089Z"
+      "timestamp": "2026-01-01T01:55:17.580Z"
     },
     {
       "province": "陕西",
@@ -2163,7 +2121,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2025-12-31T01:40:05.541Z"
+      "timestamp": "2026-01-01T01:53:47.602Z"
     },
     {
       "province": "陕西",
@@ -2193,7 +2151,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2025-12-31T01:40:13.802Z"
+      "timestamp": "2026-01-01T01:53:55.848Z"
     },
     {
       "province": "陕西",
@@ -2230,7 +2188,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:40:22.073Z"
+      "timestamp": "2026-01-01T01:54:04.000Z"
     },
     {
       "province": "陕西",
@@ -2273,7 +2231,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2025-12-31T01:40:31.479Z"
+      "timestamp": "2026-01-01T01:54:13.402Z"
     },
     {
       "province": "上海",
@@ -2310,13 +2268,13 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:41:05.134Z"
+      "timestamp": "2026-01-01T01:54:47.248Z"
     },
     {
       "province": "上海",
       "pool": "上海36",
       "availabilityZone": "随机分配",
-      "cpuCount": 10,
+      "cpuCount": 15,
       "memCount": 20,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -2328,7 +2286,12 @@
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
+        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
+        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -2352,7 +2315,7 @@
         "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2025-12-31T01:41:14.594Z"
+      "timestamp": "2026-01-01T01:54:56.789Z"
     },
     {
       "province": "四川",
@@ -2394,7 +2357,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:41:45.439Z"
+      "timestamp": "2026-01-01T01:55:29.033Z"
     },
     {
       "province": "西藏",
@@ -2431,53 +2394,11 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2025-12-31T01:42:49.570Z"
+      "timestamp": "2026-01-01T01:56:33.391Z"
     },
     {
       "province": "西南",
       "pool": "西南1",
-      "availabilityZone": "随机分配",
-      "cpuCount": 13,
-      "memCount": 17,
-      "cpuOptions": [
-        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
-        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
-        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
-        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
-        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
-      ],
-      "memoryOptions": [
-        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
-        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
-        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
-        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
-        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
-        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
-        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
-        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
-        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
-        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
-        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
-        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
-        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "224G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
-      ],
-      "timestamp": "2025-12-31T01:41:58.338Z"
-    },
-    {
-      "province": "西南",
-      "pool": "西南2-贵州",
       "availabilityZone": "随机分配",
       "cpuCount": 15,
       "memCount": 20,
@@ -2520,11 +2441,11 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2025-12-31T01:42:07.981Z"
+      "timestamp": "2026-01-01T01:55:41.813Z"
     },
     {
-      "province": "新疆",
-      "pool": "乌鲁木齐7",
+      "province": "西南",
+      "pool": "西南2-贵州",
       "availabilityZone": "随机分配",
       "cpuCount": 14,
       "memCount": 19,
@@ -2565,13 +2486,13 @@
         "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2025-12-31T01:42:20.675Z"
+      "timestamp": "2026-01-01T01:55:51.433Z"
     },
     {
       "province": "新疆",
-      "pool": "乌鲁木齐27",
+      "pool": "乌鲁木齐7",
       "availabilityZone": "随机分配",
-      "cpuCount": 14,
+      "cpuCount": 12,
       "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -2585,9 +2506,7 @@
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
         "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
         "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
-        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)"
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -2608,12 +2527,54 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2025-12-31T01:42:30.085Z"
+      "timestamp": "2026-01-01T01:56:04.078Z"
+    },
+    {
+      "province": "新疆",
+      "pool": "乌鲁木齐27",
+      "availabilityZone": null,
+      "cpuCount": 13,
+      "memCount": 17,
+      "cpuOptions": [
+        "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
+        "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
+        "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
+        "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
+        "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
+      ],
+      "memoryOptions": [
+        "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
+        "1G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(2)",
+        "2G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(3)",
+        "4G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(4)",
+        "8G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(5)",
+        "16G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(6)",
+        "24G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(7)",
+        "32G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
+        "48G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
+        "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)",
+        "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
+        "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
+        "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
+        "224G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
+      ],
+      "timestamp": "2026-01-01T01:56:12.495Z"
     },
     {
       "province": "新疆",
       "pool": "新疆昌吉IT上云3",
-      "availabilityZone": null,
+      "availabilityZone": "随机分配",
       "cpuCount": 7,
       "memCount": 10,
       "cpuOptions": [
@@ -2637,7 +2598,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2025-12-31T01:42:38.269Z"
+      "timestamp": "2026-01-01T01:56:21.876Z"
     },
     {
       "province": "云南",
@@ -2682,7 +2643,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2025-12-31T01:43:01.093Z"
+      "timestamp": "2026-01-01T01:56:44.876Z"
     },
     {
       "province": "浙江",
@@ -2727,13 +2688,13 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2025-12-31T01:43:12.406Z"
+      "timestamp": "2026-01-01T01:56:56.559Z"
     },
     {
       "province": "浙江",
       "pool": "杭州7",
-      "availabilityZone": null,
-      "cpuCount": 14,
+      "availabilityZone": "随机分配",
+      "cpuCount": 15,
       "memCount": 19,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -2745,11 +2706,12 @@
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
-        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
-        "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
-        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)"
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "96核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "128核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)",
+        "172核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(14)",
+        "192核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(15)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -2765,14 +2727,14 @@
         "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
         "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "224G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
-        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
-        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
-        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
+        "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
+        "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2025-12-31T01:43:20.571Z"
+      "timestamp": "2026-01-01T01:57:05.992Z"
     }
   ]
 }
