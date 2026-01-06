@@ -12,12 +12,12 @@
   {
     "province": "安徽",
     "pool": "芜湖4",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "北京",
     "pool": "北京5",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "重庆",
@@ -47,7 +47,7 @@
   {
     "province": "甘肃",
     "pool": "兰州2",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "甘肃",
@@ -57,12 +57,12 @@
   {
     "province": "港澳及海外",
     "pool": "澳门1",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "港澳及海外",
     "pool": "迪拜1",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "港澳及海外",
@@ -82,7 +82,7 @@
   {
     "province": "港澳及海外",
     "pool": "香港2",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "港澳及海外",
@@ -92,7 +92,7 @@
   {
     "province": "港澳及海外",
     "pool": "新加坡4",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "港澳及海外",
@@ -102,12 +102,12 @@
   {
     "province": "广东",
     "pool": "佛山3",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "广东",
     "pool": "佛山7",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "广东",
@@ -122,12 +122,12 @@
   {
     "province": "广西",
     "pool": "南宁23",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "贵州",
     "pool": "贵州3",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "海南",
@@ -142,12 +142,12 @@
   {
     "province": "河南",
     "pool": "郑州5",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "湖北",
     "pool": "武汉3",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "湖北",
@@ -157,22 +157,22 @@
   {
     "province": "湖北",
     "pool": "武汉41",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "湖南",
     "pool": "长沙3",
-    "availabilityZone": "随机分配"
-  },
-  {
-    "province": "湖南",
-    "pool": "长沙42",
     "availabilityZone": null
   },
   {
     "province": "湖南",
-    "pool": "郴州2",
+    "pool": "长沙42",
     "availabilityZone": "随机分配"
+  },
+  {
+    "province": "湖南",
+    "pool": "郴州2",
+    "availabilityZone": null
   },
   {
     "province": "华北",
@@ -217,17 +217,17 @@
   {
     "province": "江西",
     "pool": "南昌5",
-    "availabilityZone": null
-  },
-  {
-    "province": "辽宁",
-    "pool": "辽阳1",
     "availabilityZone": "随机分配"
   },
   {
     "province": "辽宁",
-    "pool": "沈阳8",
+    "pool": "辽阳1",
     "availabilityZone": null
+  },
+  {
+    "province": "辽宁",
+    "pool": "沈阳8",
+    "availabilityZone": "随机分配"
   },
   {
     "province": "内蒙",
@@ -262,12 +262,12 @@
   {
     "province": "山西",
     "pool": "晋中",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "山西",
     "pool": "太原4",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "陕西",
@@ -287,12 +287,12 @@
   {
     "province": "陕西",
     "pool": "西安7",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "上海",
     "pool": "上海7",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "上海",
@@ -302,22 +302,22 @@
   {
     "province": "四川",
     "pool": "成都4",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "西藏",
     "pool": "拉萨3",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "西南",
     "pool": "西南1",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "西南",
     "pool": "西南2-贵州",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "新疆",
@@ -327,12 +327,12 @@
   {
     "province": "新疆",
     "pool": "乌鲁木齐27",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "新疆",
     "pool": "新疆昌吉IT上云3",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "云南",
@@ -347,6 +347,6 @@
   {
     "province": "浙江",
     "pool": "杭州7",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   }
 ]
