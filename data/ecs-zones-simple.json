@@ -242,7 +242,7 @@
   {
     "province": "宁夏",
     "pool": "中卫5",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "青海",
