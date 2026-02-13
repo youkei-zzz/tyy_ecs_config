@@ -190,6 +190,11 @@
     "availabilityZone": "随机分配"
   },
   {
+    "province": "吉林",
+    "pool": "长春3",
+    "availabilityZone": "随机分配"
+  },
+  {
     "province": "江苏",
     "pool": "南京2",
     "availabilityZone": null
