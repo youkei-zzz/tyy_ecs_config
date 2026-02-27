@@ -353,5 +353,10 @@
     "province": "浙江",
     "pool": "杭州7",
     "availabilityZone": "随机分配"
+  },
+  {
+    "province": "浙江",
+    "pool": "宁波2",
+    "availabilityZone": "随机分配"
   }
 ]
