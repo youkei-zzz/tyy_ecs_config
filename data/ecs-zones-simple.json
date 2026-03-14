@@ -87,7 +87,7 @@
   {
     "province": "港澳及海外",
     "pool": "新加坡3",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "港澳及海外",
