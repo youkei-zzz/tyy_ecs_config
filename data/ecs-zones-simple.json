@@ -172,7 +172,7 @@
   {
     "province": "湖南",
     "pool": "郴州2",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "华北",
