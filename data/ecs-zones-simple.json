@@ -237,7 +237,7 @@
   {
     "province": "内蒙",
     "pool": "呼和浩特3",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "内蒙",
