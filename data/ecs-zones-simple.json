@@ -337,7 +337,7 @@
   {
     "province": "新疆",
     "pool": "新疆昌吉IT上云3",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "云南",
