@@ -142,12 +142,12 @@
   {
     "province": "河南",
     "pool": "郑州5",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "湖北",
     "pool": "武汉3",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "湖北",
@@ -157,7 +157,7 @@
   {
     "province": "湖北",
     "pool": "武汉41",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "湖南",
@@ -247,7 +247,7 @@
   {
     "province": "宁夏",
     "pool": "中卫5",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "青海",
