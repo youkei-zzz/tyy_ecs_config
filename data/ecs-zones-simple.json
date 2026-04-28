@@ -57,7 +57,7 @@
   {
     "province": "港澳及海外",
     "pool": "澳门1",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "港澳及海外",
@@ -172,7 +172,7 @@
   {
     "province": "湖南",
     "pool": "郴州2",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "华北",
