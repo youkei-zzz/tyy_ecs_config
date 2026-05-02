@@ -142,7 +142,7 @@
   {
     "province": "河南",
     "pool": "郑州5",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "湖北",
@@ -352,7 +352,7 @@
   {
     "province": "浙江",
     "pool": "杭州7",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "浙江",
