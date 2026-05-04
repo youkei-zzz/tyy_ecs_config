@@ -47,7 +47,7 @@
   {
     "province": "甘肃",
     "pool": "兰州2",
-    "availabilityZone": null
+    "availabilityZone": "随机分配"
   },
   {
     "province": "甘肃",

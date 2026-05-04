@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T02:53:54.142Z",
+  "updatedAt": "2026-05-04T02:52:09.571Z",
   "totalRecords": 72,
   "records": [
     {
@@ -42,7 +42,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:41:37.300Z"
+      "timestamp": "2026-05-04T02:39:51.107Z"
     },
     {
       "province": "安徽",
@@ -71,7 +71,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:41:45.626Z"
+      "timestamp": "2026-05-04T02:39:59.523Z"
     },
     {
       "province": "安徽",
@@ -118,7 +118,7 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2026-05-03T02:41:55.039Z"
+      "timestamp": "2026-05-04T02:40:08.967Z"
     },
     {
       "province": "北京",
@@ -160,7 +160,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:42:06.683Z"
+      "timestamp": "2026-05-04T02:40:20.460Z"
     },
     {
       "province": "重庆",
@@ -197,7 +197,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:42:18.136Z"
+      "timestamp": "2026-05-04T02:40:31.882Z"
     },
     {
       "province": "福建",
@@ -225,7 +225,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:42:29.424Z"
+      "timestamp": "2026-05-04T02:40:43.275Z"
     },
     {
       "province": "福建",
@@ -255,13 +255,13 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:42:37.731Z"
+      "timestamp": "2026-05-04T02:40:51.400Z"
     },
     {
       "province": "福建",
       "pool": "福州25",
       "availabilityZone": null,
-      "cpuCount": 8,
+      "cpuCount": 13,
       "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -269,9 +269,14 @@
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)"
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -292,7 +297,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:42:46.012Z"
+      "timestamp": "2026-05-04T02:40:59.759Z"
     },
     {
       "province": "福建",
@@ -320,12 +325,12 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:42:54.288Z"
+      "timestamp": "2026-05-04T02:41:07.879Z"
     },
     {
       "province": "甘肃",
       "pool": "兰州2",
-      "availabilityZone": null,
+      "availabilityZone": "随机分配",
       "cpuCount": 14,
       "memCount": 19,
       "cpuOptions": [
@@ -365,7 +370,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2026-05-03T02:44:27.812Z"
+      "timestamp": "2026-05-04T02:42:43.008Z"
     },
     {
       "province": "甘肃",
@@ -406,7 +411,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:44:37.330Z"
+      "timestamp": "2026-05-04T02:42:52.565Z"
     },
     {
       "province": "港澳及海外",
@@ -447,7 +452,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:43:07.127Z"
+      "timestamp": "2026-05-04T02:41:20.505Z"
     },
     {
       "province": "港澳及海外",
@@ -474,7 +479,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:43:15.319Z"
+      "timestamp": "2026-05-04T02:41:28.637Z"
     },
     {
       "province": "港澳及海外",
@@ -502,7 +507,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:43:23.454Z"
+      "timestamp": "2026-05-04T02:41:36.747Z"
     },
     {
       "province": "港澳及海外",
@@ -530,7 +535,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:43:31.611Z"
+      "timestamp": "2026-05-04T02:41:45.097Z"
     },
     {
       "province": "港澳及海外",
@@ -558,7 +563,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:43:39.720Z"
+      "timestamp": "2026-05-04T02:41:53.362Z"
     },
     {
       "province": "港澳及海外",
@@ -599,7 +604,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:43:49.128Z"
+      "timestamp": "2026-05-04T02:42:03.152Z"
     },
     {
       "province": "港澳及海外",
@@ -626,7 +631,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:43:57.568Z"
+      "timestamp": "2026-05-04T02:42:11.261Z"
     },
     {
       "province": "港澳及海外",
@@ -667,7 +672,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:44:06.960Z"
+      "timestamp": "2026-05-04T02:42:20.950Z"
     },
     {
       "province": "港澳及海外",
@@ -708,7 +713,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:44:16.443Z"
+      "timestamp": "2026-05-04T02:42:30.384Z"
     },
     {
       "province": "广东",
@@ -745,7 +750,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:44:48.648Z"
+      "timestamp": "2026-05-04T02:43:03.926Z"
     },
     {
       "province": "广东",
@@ -786,7 +791,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:44:58.091Z"
+      "timestamp": "2026-05-04T02:43:13.366Z"
     },
     {
       "province": "广东",
@@ -832,7 +837,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2026-05-03T02:45:06.409Z"
+      "timestamp": "2026-05-04T02:43:21.540Z"
     },
     {
       "province": "广西",
@@ -861,7 +866,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:45:17.718Z"
+      "timestamp": "2026-05-04T02:43:32.949Z"
     },
     {
       "province": "广西",
@@ -904,7 +909,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:45:27.105Z"
+      "timestamp": "2026-05-04T02:43:42.369Z"
     },
     {
       "province": "贵州",
@@ -945,7 +950,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:45:38.608Z"
+      "timestamp": "2026-05-04T02:43:53.804Z"
     },
     {
       "province": "海南",
@@ -989,7 +994,7 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:45:49.974Z"
+      "timestamp": "2026-05-04T02:44:05.149Z"
     },
     {
       "province": "河北",
@@ -1026,7 +1031,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:46:01.310Z"
+      "timestamp": "2026-05-04T02:44:16.523Z"
     },
     {
       "province": "河南",
@@ -1069,7 +1074,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:46:14.335Z"
+      "timestamp": "2026-05-04T02:44:29.214Z"
     },
     {
       "province": "湖北",
@@ -1097,7 +1102,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:47:11.078Z"
+      "timestamp": "2026-05-04T02:45:23.221Z"
     },
     {
       "province": "湖北",
@@ -1134,7 +1139,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:47:19.311Z"
+      "timestamp": "2026-05-04T02:45:31.370Z"
     },
     {
       "province": "湖北",
@@ -1177,7 +1182,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:47:28.767Z"
+      "timestamp": "2026-05-04T02:45:40.895Z"
     },
     {
       "province": "湖南",
@@ -1205,7 +1210,7 @@
         "64G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(8)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)"
       ],
-      "timestamp": "2026-05-03T02:47:40.243Z"
+      "timestamp": "2026-05-04T02:45:52.202Z"
     },
     {
       "province": "湖南",
@@ -1258,7 +1263,7 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(22)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(23)"
       ],
-      "timestamp": "2026-05-03T02:47:49.771Z"
+      "timestamp": "2026-05-04T02:46:02.110Z"
     },
     {
       "province": "湖南",
@@ -1302,7 +1307,7 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:47:58.101Z"
+      "timestamp": "2026-05-04T02:46:10.611Z"
     },
     {
       "province": "华北",
@@ -1357,7 +1362,7 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(23)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(24)"
       ],
-      "timestamp": "2026-05-03T02:46:28.670Z"
+      "timestamp": "2026-05-04T02:44:42.015Z"
     },
     {
       "province": "华东",
@@ -1406,7 +1411,7 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(21)"
       ],
-      "timestamp": "2026-05-03T02:46:45.048Z"
+      "timestamp": "2026-05-04T02:44:58.228Z"
     },
     {
       "province": "华南",
@@ -1453,7 +1458,7 @@
         "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2026-05-03T02:46:59.559Z"
+      "timestamp": "2026-05-04T02:45:11.868Z"
     },
     {
       "province": "吉林",
@@ -1494,7 +1499,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:49:08.131Z"
+      "timestamp": "2026-05-04T02:47:20.323Z"
     },
     {
       "province": "江苏",
@@ -1523,7 +1528,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:48:09.493Z"
+      "timestamp": "2026-05-04T02:46:21.902Z"
     },
     {
       "province": "江苏",
@@ -1560,7 +1565,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:48:17.937Z"
+      "timestamp": "2026-05-04T02:46:30.102Z"
     },
     {
       "province": "江苏",
@@ -1601,7 +1606,7 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:48:26.347Z"
+      "timestamp": "2026-05-04T02:46:38.382Z"
     },
     {
       "province": "江苏",
@@ -1645,7 +1650,7 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:48:34.519Z"
+      "timestamp": "2026-05-04T02:46:46.713Z"
     },
     {
       "province": "江西",
@@ -1687,7 +1692,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:48:46.166Z"
+      "timestamp": "2026-05-04T02:46:58.275Z"
     },
     {
       "province": "江西",
@@ -1728,7 +1733,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:48:55.581Z"
+      "timestamp": "2026-05-04T02:47:07.706Z"
     },
     {
       "province": "辽宁",
@@ -1769,7 +1774,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:49:19.463Z"
+      "timestamp": "2026-05-04T02:47:31.760Z"
     },
     {
       "province": "辽宁",
@@ -1810,7 +1815,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:49:28.880Z"
+      "timestamp": "2026-05-04T02:47:41.221Z"
     },
     {
       "province": "内蒙",
@@ -1851,7 +1856,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:49:41.445Z"
+      "timestamp": "2026-05-04T02:47:53.872Z"
     },
     {
       "province": "内蒙",
@@ -1893,7 +1898,7 @@
         "384G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:49:49.631Z"
+      "timestamp": "2026-05-04T02:48:02.237Z"
     },
     {
       "province": "宁夏",
@@ -1935,14 +1940,14 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:50:00.997Z"
+      "timestamp": "2026-05-04T02:48:13.589Z"
     },
     {
       "province": "青海",
       "pool": "西宁2",
       "availabilityZone": null,
-      "cpuCount": 10,
-      "memCount": 15,
+      "cpuCount": 13,
+      "memCount": 17,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
         "1核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(2)",
@@ -1953,7 +1958,10 @@
         "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
         "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
         "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
-        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
+        "40核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)",
+        "48核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(11)",
+        "56核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(12)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(13)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -1969,10 +1977,12 @@
         "96G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(11)",
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(12)",
         "192G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(13)",
-        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
-        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
+        "224G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
+        "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)",
+        "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
+        "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:50:12.403Z"
+      "timestamp": "2026-05-04T02:48:24.889Z"
     },
     {
       "province": "山东",
@@ -2013,7 +2023,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:51:02.793Z"
+      "timestamp": "2026-05-04T02:49:15.185Z"
     },
     {
       "province": "山东",
@@ -2054,7 +2064,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:51:12.212Z"
+      "timestamp": "2026-05-04T02:49:24.581Z"
     },
     {
       "province": "山西",
@@ -2091,7 +2101,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:51:44.832Z"
+      "timestamp": "2026-05-04T02:49:57.534Z"
     },
     {
       "province": "山西",
@@ -2134,13 +2144,13 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:51:54.606Z"
+      "timestamp": "2026-05-04T02:50:07.073Z"
     },
     {
       "province": "陕西",
       "pool": "西安3",
       "availabilityZone": null,
-      "cpuCount": 7,
+      "cpuCount": 10,
       "memCount": 10,
       "cpuOptions": [
         "全部CPU css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(1)",
@@ -2148,8 +2158,11 @@
         "2核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(3)",
         "4核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(4)",
         "8核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(5)",
-        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
-        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)"
+        "12核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(6)",
+        "16核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(7)",
+        "24核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(8)",
+        "32核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(9)",
+        "64核 css=.el-select-dropdown:has-text(\"全部CPU\") ul >> li:nth-of-type(10)"
       ],
       "memoryOptions": [
         "全部内存 css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(1)",
@@ -2163,7 +2176,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:50:24.037Z"
+      "timestamp": "2026-05-04T02:48:36.363Z"
     },
     {
       "province": "陕西",
@@ -2193,7 +2206,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:50:32.287Z"
+      "timestamp": "2026-05-04T02:48:44.680Z"
     },
     {
       "province": "陕西",
@@ -2230,7 +2243,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:50:40.550Z"
+      "timestamp": "2026-05-04T02:48:52.812Z"
     },
     {
       "province": "陕西",
@@ -2273,7 +2286,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)"
       ],
-      "timestamp": "2026-05-03T02:50:49.944Z"
+      "timestamp": "2026-05-04T02:49:02.486Z"
     },
     {
       "province": "上海",
@@ -2310,7 +2323,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:51:23.518Z"
+      "timestamp": "2026-05-04T02:49:36.011Z"
     },
     {
       "province": "上海",
@@ -2357,7 +2370,7 @@
         "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2026-05-03T02:51:33.362Z"
+      "timestamp": "2026-05-04T02:49:45.855Z"
     },
     {
       "province": "四川",
@@ -2399,7 +2412,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:52:06.022Z"
+      "timestamp": "2026-05-04T02:50:18.735Z"
     },
     {
       "province": "西藏",
@@ -2436,7 +2449,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:53:10.912Z"
+      "timestamp": "2026-05-04T02:51:26.371Z"
     },
     {
       "province": "西南",
@@ -2483,7 +2496,7 @@
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(20)"
       ],
-      "timestamp": "2026-05-03T02:52:19.428Z"
+      "timestamp": "2026-05-04T02:50:34.901Z"
     },
     {
       "province": "西南",
@@ -2528,7 +2541,7 @@
         "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "1536G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2026-05-03T02:52:29.324Z"
+      "timestamp": "2026-05-04T02:50:44.351Z"
     },
     {
       "province": "新疆",
@@ -2569,7 +2582,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:52:41.938Z"
+      "timestamp": "2026-05-04T02:50:57.146Z"
     },
     {
       "province": "新疆",
@@ -2611,7 +2624,7 @@
         "320G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(16)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(17)"
       ],
-      "timestamp": "2026-05-03T02:52:50.105Z"
+      "timestamp": "2026-05-04T02:51:05.497Z"
     },
     {
       "province": "新疆",
@@ -2640,7 +2653,7 @@
         "128G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(9)",
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(10)"
       ],
-      "timestamp": "2026-05-03T02:52:59.497Z"
+      "timestamp": "2026-05-04T02:51:14.908Z"
     },
     {
       "province": "云南",
@@ -2685,7 +2698,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2026-05-03T02:53:22.296Z"
+      "timestamp": "2026-05-04T02:51:37.832Z"
     },
     {
       "province": "浙江",
@@ -2730,7 +2743,7 @@
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "768G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2026-05-03T02:53:33.861Z"
+      "timestamp": "2026-05-04T02:51:49.220Z"
     },
     {
       "province": "浙江",
@@ -2775,7 +2788,7 @@
         "1024G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(18)",
         "1336G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(19)"
       ],
-      "timestamp": "2026-05-03T02:53:43.272Z"
+      "timestamp": "2026-05-04T02:51:58.613Z"
     },
     {
       "province": "浙江",
@@ -2812,7 +2825,7 @@
         "256G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(14)",
         "512G css=.el-select-dropdown:has-text(\"全部内存\") ul >> li:nth-of-type(15)"
       ],
-      "timestamp": "2026-05-03T02:53:52.640Z"
+      "timestamp": "2026-05-04T02:52:08.070Z"
     }
   ]
 }
