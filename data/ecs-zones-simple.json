@@ -292,7 +292,7 @@
   {
     "province": "陕西",
     "pool": "西安7",
-    "availabilityZone": "随机分配"
+    "availabilityZone": null
   },
   {
     "province": "上海",
